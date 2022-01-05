@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/bash/bash-5.1.8.tar.gz"
+		}
+	],
+	"package": {
+		"name": "bash",
+		"version": "5.1.8",
+
+		"description": "Bash is the GNU Project's shell—the Bourne Again SHell.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
