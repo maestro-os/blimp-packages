@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/ncurses/ncurses-6.2.tar.gz"
+		}
+	],
+	"package": {
+		"name": "ncurses",
+		"version": "6.2",
+
+		"description": "ncurses (new curses) is a programming library providing an application programming interface (API) that allows the programmer to write text-based user interfaces in a terminal-independent manner.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
