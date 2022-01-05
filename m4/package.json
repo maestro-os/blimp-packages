@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz"
+		}
+	],
+	"package": {
+		"name": "m4",
+		"version": "1.4.19",
+
+		"description": "GNU M4 is an implementation of the traditional Unix macro processor.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
