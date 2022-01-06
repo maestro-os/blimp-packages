@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d coreutils*)
+
+# Patching to support Maestro
+# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+
+# Compiling
+./configure --prefix=/usr \
+	--host=$TARGET \
+	--build=$HOST \
+	--enable-install-program=hostname \
+	--enable-no-install-program=kill,uptime
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
+mv $SYSROOT/usr/bin/chroot $SYSROOT/usr/sbin
+mkdir -p $SYSROOT/usr/share/man/man8
+mv $SYSROOT/usr/share/man/man1/chroot.1 $SYSROOT/usr/share/man/man8/chroot.8
+sed -i 's/"1"/"8"/' $SYSROOT/usr/share/man/man8/chroot.8

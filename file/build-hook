@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d file*)
+
+# Patching to support Maestro
+# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+
+# Compiling
+mkdir build
+cd build
+../configure --disable-bzlib --disable-libseccomp --disable-xzlib --disable-zlib
+make -j${JOBS}
+cd ..
+
+./configure --prefix=/usr --host=$TARGET --build=$HOST
+make FILE_COMPILE=$(pwd)/build/src/file -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install

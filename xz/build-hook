@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d xz*)
+
+# Compiling
+./configure --prefix=/usr \
+	--host=$TARGET \
+	--build=$HOST \
+	--disable-static \
+	--docdir=/usr/share/doc/xz-5.2.5
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install

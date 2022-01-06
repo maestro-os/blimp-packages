@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/gawk/gawk-5.1.1.tar.xz"
+		}
+	],
+	"package": {
+		"name": "gawk",
+		"version": "5.1.1",
+
+		"description": "The awk utility interprets a special-purpose programming language that makes it possible to handle simple data-reformatting jobs with just a few lines of code.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d findutils*)
+
+# Patching to support Maestro
+# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+
+# Compiling
+./configure --prefix=/usr \
+	--localstatedir=/var/lib/locate \
+	--host=$TARGET \
+	--build=$HOST
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install

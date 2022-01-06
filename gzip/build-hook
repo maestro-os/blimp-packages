@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d gzip*)
+
+# Patching to support Maestro
+# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+
+# Compiling
+./configure --prefix=/usr \
+	--host=$TARGET
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install

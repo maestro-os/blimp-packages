@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/sed/sed-4.8.tar.xz"
+		}
+	],
+	"package": {
+		"name": "sed",
+		"version": "4.8",
+
+		"description": "sed (stream editor) is a non-interactive command-line text editor.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz"
+		}
+	],
+	"package": {
+		"name": "diffutils",
+		"version": "3.8",
+
+		"description": "GNU Diffutils is a package of several programs related to finding differences between files.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

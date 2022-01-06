@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/make/make-4.3.tar.gz"
+		}
+	],
+	"package": {
+		"name": "make",
+		"version": "4.3",
+
+		"description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

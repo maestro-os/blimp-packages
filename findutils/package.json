@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/findutils/findutils-4.8.0.tar.xz"
+		}
+	],
+	"package": {
+		"name": "findutils",
+		"version": "4.8.0",
+
+		"description": "The GNU Find Utilities are the basic directory searching utilities of the GNU operating system.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

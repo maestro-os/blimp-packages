@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://tukaani.org/xz/xz-5.2.5.tar.xz"
+		}
+	],
+	"package": {
+		"name": "xz",
+		"version": "5.2.5",
+
+		"description": "XZ Utils is free general-purpose data compression software with a high compression ratio.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

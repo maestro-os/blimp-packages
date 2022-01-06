@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz"
+		}
+	],
+	"package": {
+		"name": "grep",
+		"version": "3.7",
+
+		"description": "Grep searches one or more input files for lines containing a match to a specified pattern.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
