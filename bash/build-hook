@@ -6,7 +6,7 @@ set -e
 cd $(ls -1d bash*)
 
 # Patching to support Maestro
-sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
 
 # Compiling
 ./configure --prefix=/usr \
@@ -17,4 +17,4 @@ make -j${JOBS}
 
 # Installing
 make DESTDIR=$SYSROOT install
-ln -sv bash $SYSROOT/bin/sh
+ln -s bash $SYSROOT/usr/bin/sh
