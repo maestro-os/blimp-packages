@@ -6,7 +6,7 @@ set -e
 cd $(ls -1d coreutils*)
 
 # Patching to support Maestro
-# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
+sed -i 's/^	gnu\* |/	gnu* | maestro* |/' build-aux/config.sub
 
 # Compiling
 ./configure --prefix=/usr \

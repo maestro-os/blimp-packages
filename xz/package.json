@@ -2,7 +2,7 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://tukaani.org/xz/xz-5.2.5.tar.xz"
+			"url": "https://altushost-swe.dl.sourceforge.net/project/lzmautils/xz-5.2.5.tar.xz"
 		}
 	],
 	"package": {

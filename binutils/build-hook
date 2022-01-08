@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d binutils*)
+
+# Patching to support Maestro
+# TODO
+
+mkdir build
+cd build
+
+# Compiling
+../configure --prefix=/usr \
+	--host=$TARGET \
+	--build=$HOST \
+	--disable-nls \
+	--enable-shared \
+	--disable-werror \
+	--enable-64-bit-bfd
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install -j1
+install -vm755 libctf/.libs/libctf.so.0.0.0 $SYSROOT/usr/lib

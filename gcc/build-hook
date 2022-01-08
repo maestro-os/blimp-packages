@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d gcc*)
+
+# Patching to support Maestro
+# TODO
+
+# TODO Clean
+./contrib/download_prerequisites
+
+mkdir build
+cd build
+
+mkdir -pv $TARGET/libgcc
+ln -s ../../../libgcc/gthr-posix.h $TARGET/libgcc/gthr-default.h
+
+# Compiling
+../configure --prefix=/usr \
+	--host=$TARGET \
+	--build=$HOST \
+	CC_FOR_TARGET=$TARGET-gcc \
+	--with-build-sysroot=$BUILD_SYSROOT \
+	--enable-initfini-array \
+	--disable-nls \
+	--disable-multilib \
+	--disable-decimal-float \
+	--disable-libatomic \
+    --disable-libgomp \
+    --disable-libquadmath \
+    --disable-libssp \
+    --disable-libvtv \
+    --disable-libstdcxx \
+    --enable-languages=c,c++
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
+ln -s gcc $SYSROOT/usr/bin/cc

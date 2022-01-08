@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "http://ftp.igh.cnrs.fr/pub/gnu/binutils/binutils-2.37.tar.xz"
+		}
+	],
+	"package": {
+		"name": "binutils",
+		"version": "2.37",
+
+		"description": "The GNU Binutils are a collection of binary tools.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
