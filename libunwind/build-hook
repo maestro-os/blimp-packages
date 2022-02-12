@@ -3,10 +3,10 @@
 set -e
 
 # TODO Add a feature in the package builder to unwrap the directories automatically
-cd $(ls -1d bash*)
+cd $(ls -1d libunwind*)
 
 # Patching to support Maestro
-sed -i 's/^	gnu\* |/	gnu* | maestro* |/' support/config.sub
+sed -i 's/^	-gnu\* |/	-gnu* | -maestro* |/' config/config.sub
 
 # Compiling
 ./configure --prefix=/usr \
