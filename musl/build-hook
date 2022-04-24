@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+# TODO Add a feature in the package builder to unwrap the directories automatically
+cd $(ls -1d musl*)
+
+# Compiling
+./configure \
+	--target="$TARGET" \
+	--prefix="/usr" \
+	--enable-shared
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
