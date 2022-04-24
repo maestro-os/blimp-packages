@@ -11,6 +11,12 @@ sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
 # Patching to ensure gawk is found first
 sed -i s/mawk// configure
 
+# Suspending CC and CFLAGS
+TMP_CC=$CC
+TMP_CFLAGS=$CFLAGS
+unset CC
+unset CFLAGS
+
 # Compiling tic
 mkdir build
 cd build
@@ -18,6 +24,12 @@ cd build
 make -C include
 make -C progs tic
 cd ..
+
+# Restoring CC and CFLAGS
+export CC=$TMP_CC
+export CFLAGS=$TMP_CFLAGS
+unset TMP_CC
+unset TMP_CFLAGS
 
 # Compiling ncurses
 ./configure --prefix=/usr \
