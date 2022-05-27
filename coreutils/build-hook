@@ -12,8 +12,7 @@ sed -i 's/^	gnu\* |/	gnu* | maestro* |/' build-aux/config.sub
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST \
-	--enable-install-program=hostname \
-	--enable-no-install-program=kill,uptime
+	--enable-install-program=hostname
 make -j${JOBS}
 
 # Installing

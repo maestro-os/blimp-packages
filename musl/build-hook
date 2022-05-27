@@ -9,6 +9,8 @@ cd $(ls -1d musl*)
 ./configure \
 	--target="$TARGET" \
 	--prefix="/usr" \
+	--enable-debug \
+	--enable-optimize= \
 	--enable-shared
 make -j${JOBS}
 

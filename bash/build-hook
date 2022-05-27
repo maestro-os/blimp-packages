@@ -12,6 +12,7 @@ sed -i 's/^	gnu\* |/	gnu* | maestro* |/' support/config.sub
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST \
+	--enable-debug \
 	--without-bash-malloc
 make -j${JOBS}
 
