@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "TODO"
+		}
+	],
+	"package": {
+		"name": "solfege",
+		"version": "1.0.0",
+
+		"description": "Solfege is the booting system for the Maestro OS",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

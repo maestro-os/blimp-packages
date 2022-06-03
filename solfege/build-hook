@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+
+cd solfege
+
+
+
+# Compiling
+cargo build --release --target $TARGET -Zbuild-std
+strip target/release/solfege
+
+
+
+# Installing
+mkdir -p $SYSROOT/etc/solfege/services
+
+cat >$SYSROOT/etc/fstab <<EOF
+# <file system> <dir> <type> <options> <dump> <pass>
+tmpfs			/tmp	tmpfs	rw		0		0
+sysfs			/sys	sysfs	rw		0		1
+procfs			/proc	procfs	rw		0		2
+EOF
+
+# TODO Run login instead
+echo '/bin/bash' >$SYSROOT/etc/solfege/startup
+
+cp target/release/solfege $SYSROOT/sbin/init
