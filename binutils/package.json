@@ -2,7 +2,8 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "http://ftp.igh.cnrs.fr/pub/gnu/binutils/binutils-2.37.tar.xz"
+			"url": "http://ftp.igh.cnrs.fr/pub/gnu/binutils/binutils-2.37.tar.xz",
+			"unwrap": true
 		}
 	],
 	"package": {

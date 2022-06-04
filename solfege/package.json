@@ -2,12 +2,12 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "TODO"
+			"git_url": "https://github.com/llenotre/solfege"
 		}
 	],
 	"package": {
 		"name": "solfege",
-		"version": "1.0.0",
+		"version": "0.1",
 
 		"description": "Solfege is the booting system for the Maestro OS",
 

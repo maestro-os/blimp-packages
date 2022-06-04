@@ -2,7 +2,8 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz"
+			"url": "https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz",
+			"unwrap": true
 		}
 	],
 	"package": {

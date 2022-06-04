@@ -2,9 +2,6 @@
 
 set -e
 
-# TODO Add a feature in the package builder to unwrap the directories automatically
-cd $(ls -1d ncurses*)
-
 # Patching to support Maestro
 sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
 

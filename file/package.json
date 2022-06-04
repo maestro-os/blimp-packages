@@ -2,7 +2,8 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://astron.com/pub/file/file-5.41.tar.gz"
+			"url": "https://astron.com/pub/file/file-5.41.tar.gz",
+			"unwrap": true
 		}
 	],
 	"package": {

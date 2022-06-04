@@ -2,7 +2,8 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz"
+			"url": "https://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz",
+			"unwrap": true
 		}
 	],
 	"package": {

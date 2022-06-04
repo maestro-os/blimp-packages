@@ -2,7 +2,8 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"
+			"url": "https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz",
+			"unwrap": true
 		}
 	],
 	"package": {
