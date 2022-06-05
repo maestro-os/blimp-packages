@@ -6,7 +6,7 @@ set -e
 sed -i 's/^	gnu\* |/	gnu* | maestro* |/' build-aux/config.sub
 
 # Compiling
-./configure \
+./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST \
 	--enable-install-program=hostname

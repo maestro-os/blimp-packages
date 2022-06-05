@@ -6,7 +6,7 @@ set -e
 sed -i 's/^	gnu\* |/	gnu* | maestro* |/' support/config.sub
 
 # Compiling
-./configure \
+./configure --prefix=/ \
 	--host=$TARGET \
 	--build=$HOST \
 	--without-bash-malloc
@@ -14,4 +14,4 @@ make -j${JOBS}
 
 # Installing
 make DESTDIR=$SYSROOT install
-ln -s bash $SYSROOT/usr/bin/sh
+ln -s bash $SYSROOT/bin/sh
