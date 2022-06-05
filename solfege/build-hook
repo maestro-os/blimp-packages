@@ -2,17 +2,16 @@
 
 set -e
 
-cd solfege
-
 
 
 # Compiling
 cargo build --release --target $TARGET -Zbuild-std
-strip target/release/solfege
+strip target/$TARGET/release/solfege
 
 
 
 # Installing
+mkdir -p $SYSROOT/sbin
 mkdir -p $SYSROOT/etc/solfege/services
 
 cat >$SYSROOT/etc/fstab <<EOF
@@ -25,4 +24,4 @@ EOF
 # TODO Run login instead
 echo '/bin/bash' >$SYSROOT/etc/solfege/startup
 
-cp target/release/solfege $SYSROOT/sbin/init
+cp target/$TARGET/release/solfege $SYSROOT/sbin/init
