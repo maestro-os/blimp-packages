@@ -14,7 +14,7 @@ debug_test="false"
 debug_testprocess="false"
 debug_storagetest="false"
 debug_qemu="false"
-debug_malloc_magic="true"
+debug_malloc_magic="false"
 debug_malloc_check="false"
 debug_rust_backtrace="false"
 EOF
