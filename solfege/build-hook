@@ -21,7 +21,6 @@ sysfs			/sys	sysfs	rw		0		1
 procfs			/proc	procfs	rw		0		2
 EOF
 
-# TODO Run login instead
-echo '/bin/bash' >$SYSROOT/etc/solfege/startup
+echo '/sbin/login' >$SYSROOT/etc/solfege/startup
 
 cp target/$TARGET/release/solfege $SYSROOT/sbin/init

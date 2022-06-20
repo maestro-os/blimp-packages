@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/maestro"
+		}
+	],
+	"package": {
+		"name": "maestro",
+		"version": "1.0",
+
+		"description": "Maestro is a lightweight Unix-like kernel written in Rust",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

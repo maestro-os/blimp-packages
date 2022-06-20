@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/maestro-utils"
+		}
+	],
+	"package": {
+		"name": "maestro-utils",
+		"version": "0.1",
+
+		"description": "Maestro-utils is a package of utility commands for the Maestro OS.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
