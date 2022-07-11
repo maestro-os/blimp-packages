@@ -20,6 +20,7 @@ tmpfs			/tmp	tmpfs	rw		0		0
 sysfs			/sys	sysfs	rw		0		1
 procfs			/proc	procfs	rw		0		2
 EOF
+ln -sv /proc/self/mounts /etc/mtab
 
 echo '/sbin/login' >$SYSROOT/etc/solfege/startup
 
