@@ -14,4 +14,4 @@ make -j${JOBS}
 
 # Installing
 make DESTDIR=$SYSROOT install
-ln -s bash $SYSROOT/bin/sh
+ln -sv bash $SYSROOT/bin/sh

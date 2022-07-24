@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+# Compiling
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
