@@ -3,6 +3,8 @@
 set -e
 
 # Compiling
+./autogen.sh
+./configure --prefix="/usr"
 make -j${JOBS}
 
 # Installing
