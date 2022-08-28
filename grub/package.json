@@ -1,0 +1,18 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz",
+			"unwrap": true
+		}
+	],
+	"package": {
+		"name": "grub",
+		"version": "2.06",
+
+		"description": "GNU GRUB is a Multiboot boot loader. It was derived from GRUB, the GRand Unified Bootloader, which was originally designed and implemented by Erich Stefan Boleyn.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

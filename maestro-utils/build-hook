@@ -8,6 +8,7 @@ set -e
 cargo build --release --target $TARGET -Zbuild-std
 # TODO Iterate on all executables
 strip target/$TARGET/release/login
+strip target/$TARGET/release/ps
 
 
 
@@ -15,3 +16,4 @@ strip target/$TARGET/release/login
 mkdir -p $SYSROOT/sbin
 # TODO Iterate on all executables
 cp target/$TARGET/release/login $SYSROOT/sbin
+cp target/$TARGET/release/ps $SYSROOT/sbin
