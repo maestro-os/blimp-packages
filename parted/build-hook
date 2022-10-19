@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+# Compiling
+./configure --prefix=/ \
+	--host=$TARGET \
+	--build=$HOST
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
