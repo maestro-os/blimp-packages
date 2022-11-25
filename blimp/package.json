@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/blimp"
+		}
+	],
+	"package": {
+		"name": "blimp",
+		"version": "0.1",
+
+		"description": "Blimp is a package manager for Unix systems",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+
+
+# Compiling
+cargo build --release --target $TARGET -Zbuild-std
+
+
+
+# Installing
+mkdir -pv $SYSROOT/usr/{bin,lib/blimp}
+cp -v target/$TARGET/release/blimp $SYSROOT/usr/bin/blimp
