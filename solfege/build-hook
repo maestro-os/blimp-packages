@@ -6,7 +6,6 @@ set -e
 
 # Compiling
 cargo build --release --target $TARGET -Zbuild-std
-strip target/$TARGET/release/solfege
 
 
 
