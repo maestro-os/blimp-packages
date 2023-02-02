@@ -7,16 +7,16 @@ set -e
 # Creating configuration
 # TODO Adapt arch to TARGET
 cat >.config <<EOF
-general_arch="x86"
-general_scheduler_end_panic="true"
-debug_debug="false"
-debug_test="false"
-debug_testprocess="false"
-debug_storagetest="false"
-debug_qemu="false"
-debug_malloc_magic="false"
-debug_malloc_check="false"
-debug_rust_backtrace="false"
+GENERAL_ARCH="x86"
+GENERAL_SCHEDULER_END_PANIC="true"
+DEBUG_DEBUG="false"
+DEBUG_TEST="false"
+DEBUG_TESTPROCESS="false"
+DEBUG_STORAGETEST="false"
+DEBUG_QEMU="false"
+DEBUG_MALLOC_MAGIC="false"
+DEBUG_MALLOC_CHECK="false"
+DEBUG_RUST_BACKTRACE="false"
 EOF
 
 
@@ -28,6 +28,6 @@ make
 
 # Installing
 mkdir -p $SYSROOT/boot
-cp maestro $SYSROOT/sbin/init
+cp maestro $SYSROOT/boot/
 
 # TODO Add grub entry
