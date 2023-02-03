@@ -1,0 +1,27 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/maestro_ps2"
+		}
+	],
+	"package": {
+		"name": "maestro-ps2",
+		"version": "1.0",
+
+		"description": "Maestro kernel module for PS/2 devices.",
+
+		"build_deps": [
+			{
+				"name": "maestro-build",
+				"version": "1.0"
+			}
+		],
+		"run_deps": [
+			{
+				"name": "solfege",
+				"version": "*"
+			}
+		]
+	}
+}

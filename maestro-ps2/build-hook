@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+export KERN_SRC="/usr/src/maestro"
+make
+
+# TODO get version from selected kernel dependency?
+mkdir -pv $SYSROOT/lib/modules/maestro-1.0/default
+cp -v ps2.kmod $SYSROOT/lib/modules/maestro-1.0/default/
