@@ -20,7 +20,5 @@ EOF
 make maestro
 
 mkdir -p $SYSROOT/usr/src/maestro
-cp -rv ./* $SYSROOT/usr/src/maestro/
-# TODO find a way to avoid copying .git, since it can get pretty big
-cp -rv ./.* $SYSROOT/usr/src/maestro/
-rm -r $SYSROOT/usr/src/maestro/.git/
+cp -rv * $SYSROOT/usr/src/maestro/
+cp -v .config $SYSROOT/usr/src/maestro/
