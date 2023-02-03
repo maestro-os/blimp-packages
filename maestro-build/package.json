@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/maestro"
+		}
+	],
+	"package": {
+		"name": "maestro-build",
+		"version": "1.0",
+
+		"description": "The maestro kernel served with source and build files that are necessary for module compilation",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

@@ -11,7 +11,12 @@
 
 		"description": "Maestro is a lightweight Unix-like kernel written in Rust",
 
-		"build_deps": [],
+		"build_deps": [
+			{
+				"name": "maestro-build",
+				"version": "1.0"
+			}
+		],
 		"run_deps": []
 	}
 }

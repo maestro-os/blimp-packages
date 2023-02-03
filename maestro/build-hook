@@ -2,32 +2,8 @@
 
 set -e
 
-
-
-# Creating configuration
-# TODO Adapt arch to TARGET
-cat >.config <<EOF
-GENERAL_ARCH="x86"
-GENERAL_SCHEDULER_END_PANIC="true"
-DEBUG_DEBUG="false"
-DEBUG_TEST="false"
-DEBUG_TESTPROCESS="false"
-DEBUG_STORAGETEST="false"
-DEBUG_QEMU="false"
-DEBUG_MALLOC_MAGIC="false"
-DEBUG_MALLOC_CHECK="false"
-DEBUG_RUST_BACKTRACE="false"
-EOF
-
-
-
-# Compiling
-make
-
-
-
 # Installing
 mkdir -p $SYSROOT/boot
-cp maestro $SYSROOT/boot/
+cp -v /usr/src/maestro/maestro $SYSROOT/boot/
 
 # TODO Add grub entry
