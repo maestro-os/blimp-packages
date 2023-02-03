@@ -16,8 +16,7 @@ mkdir -p $SYSROOT/etc/solfege/services
 cat >$SYSROOT/etc/fstab <<EOF
 # <file system> <dir> <type> <options> <dump> <pass>
 tmpfs			/tmp	tmpfs	rw		0		0
-sysfs			/sys	sysfs	rw		0		1
-procfs			/proc	procfs	rw		0		2
+procfs			/proc	procfs	rw		0		1
 EOF
 ln -sv /proc/self/mounts $SYSROOT/etc/mtab
 
