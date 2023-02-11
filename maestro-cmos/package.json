@@ -14,13 +14,13 @@
 		"build_deps": [
 			{
 				"name": "maestro-build",
-				"version": "1.0"
+				"version": ["1.0"]
 			}
 		],
 		"run_deps": [
 			{
 				"name": "solfege",
-				"version": "*"
+				"version": ["*"]
 			}
 		]
 	}

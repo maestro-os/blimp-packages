@@ -22,3 +22,4 @@ make maestro
 mkdir -p $SYSROOT/usr/src/maestro
 cp -rv * $SYSROOT/usr/src/maestro/
 cp -v .config $SYSROOT/usr/src/maestro/
+chmod -R +r $SYSROOT/usr/src/maestro/
