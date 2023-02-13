@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+unset {C,CPP,CXX,LD}FLAGS
+
+# Compiling
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-efiemu  \
+            --disable-werror
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install
