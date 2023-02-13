@@ -26,3 +26,16 @@ cp target/$TARGET/release/rmmod $SYSROOT/sbin
 cp target/$TARGET/release/su $SYSROOT/sbin
 cp target/$TARGET/release/umount $SYSROOT/sbin
 cp target/$TARGET/release/usrgrp $SYSROOT/sbin
+
+ln -s /sbin/fdisk $SYSROOT/sbin/sfdisk
+ln -s /sbin/mkfs $SYSROOT/sbin/mkfs.ext2
+ln -s /sbin/powerctl $SYSROOT/sbin/halt
+ln -s /sbin/powerctl $SYSROOT/sbin/reboot
+ln -s /sbin/powerctl $SYSROOT/sbin/shutdown
+ln -s /sbin/powerctl $SYSROOT/sbin/suspend
+ln -s /sbin/usrgrp $SYSROOT/sbin/useradd
+ln -s /sbin/usrgrp $SYSROOT/sbin/userdel
+ln -s /sbin/usrgrp $SYSROOT/sbin/usermod
+ln -s /sbin/usrgrp $SYSROOT/sbin/groupadd
+ln -s /sbin/usrgrp $SYSROOT/sbin/groupdel
+ln -s /sbin/usrgrp $SYSROOT/sbin/groupmod
