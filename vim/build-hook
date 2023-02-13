@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+# Compiling
+echo '#define SYS_VIMRC_FILE  "/etc/vimrc"' >>src/feature.h
+echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' >>src/feature.h
+./configure --prefix=/usr        \
+            --with-features=huge \
+            --enable-gui=gtk3    \
+            --with-tlib=ncursesw
+make -j${JOBS}
+
+# Installing
+make DESTDIR=$SYSROOT install

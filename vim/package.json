@@ -1,0 +1,18 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"url": "https://ftp.nluug.nl/pub/vim/unix/vim-9.0.tar.bz2",
+			"unwrap": true
+		}
+	],
+	"package": {
+		"name": "vim",
+		"version": "9.0",
+
+		"description": "Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}
