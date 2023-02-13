@@ -2,6 +2,7 @@
 
 set -e
 
+unset CC
 unset {C,CPP,CXX,LD}FLAGS
 
 # Compiling
