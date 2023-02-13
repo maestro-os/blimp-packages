@@ -5,15 +5,24 @@ set -e
 
 
 # Compiling
-cargo build --target $TARGET -Zbuild-std
-# TODO Iterate on all executables
-#strip target/$TARGET/release/login
-#strip target/$TARGET/release/ps
+cargo build --target $TARGET -Zbuild-std --release
 
 
 
 # Installing
 mkdir -p $SYSROOT/sbin
 # TODO Iterate on all executables
-cp target/$TARGET/debug/login $SYSROOT/sbin
-cp target/$TARGET/debug/ps $SYSROOT/sbin
+cp target/$TARGET/release/dmesg $SYSROOT/sbin
+cp target/$TARGET/release/fdisk $SYSROOT/sbin
+cp target/$TARGET/release/insmod $SYSROOT/sbin
+cp target/$TARGET/release/login $SYSROOT/sbin
+cp target/$TARGET/release/lsmod $SYSROOT/sbin
+cp target/$TARGET/release/mkfs $SYSROOT/sbin
+cp target/$TARGET/release/mount $SYSROOT/sbin
+cp target/$TARGET/release/nologin $SYSROOT/sbin
+cp target/$TARGET/release/powerctl $SYSROOT/sbin
+cp target/$TARGET/release/ps $SYSROOT/sbin
+cp target/$TARGET/release/rmmod $SYSROOT/sbin
+cp target/$TARGET/release/su $SYSROOT/sbin
+cp target/$TARGET/release/umount $SYSROOT/sbin
+cp target/$TARGET/release/usrgrp $SYSROOT/sbin
