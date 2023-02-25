@@ -2,14 +2,21 @@
 
 set -e
 
-unset CC
-unset {C,CPP,CXX,LD}FLAGS
+unset CC LD
+export CFLAGS="-m32"
+export LDFLAGS="-static"
 
-# Compiling
-./configure --prefix=/usr     \
-            --sysconfdir=/etc \
-            --disable-efiemu  \
-            --disable-werror
+./configure           \
+	--host=$TARGET    \
+	--target=$TARGET  \
+	--prefix=/usr     \
+	--sysconfdir=/etc \
+	--disable-efiemu  \
+	--disable-werror
+
+# Workaround
+sed -i '/^HOST_CFLAGS=*/ s/$/ -m32/' Makefile
+
 make -j${JOBS}
 
 # Installing
