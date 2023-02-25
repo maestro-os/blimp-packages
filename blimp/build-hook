@@ -5,7 +5,7 @@ set -e
 
 
 # Compiling
-cargo build --release --target $TARGET -Zbuild-std
+cargo build --bin blimp --release --target $TARGET -Zbuild-std
 
 
 
