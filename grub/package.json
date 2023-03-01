@@ -12,7 +12,12 @@
 
 		"description": "GNU GRUB is a Multiboot boot loader. It was derived from GRUB, the GRand Unified Bootloader, which was originally designed and implemented by Erich Stefan Boleyn.",
 
-		"build_deps": [],
+		"build_deps": [
+			{
+				"name": "linux-headers",
+				"version": ["*"]
+			}
+		],
 		"run_deps": []
 	}
 }

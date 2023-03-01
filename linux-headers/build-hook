@@ -5,4 +5,4 @@ set -e
 unset CFLAGS LDFLAGS
 
 # TODO adapt to all architectures
-make headers_install ARCH=i386 INSTALL_HDR_PATH=/usr
+make headers_install ARCH=i386 INSTALL_HDR_PATH="$SYSROOT/usr"

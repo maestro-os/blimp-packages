@@ -3,20 +3,15 @@
 set -e
 
 unset CC LD
-export CFLAGS="-m32"
 export LDFLAGS="-static"
 
 ./configure           \
-	--host=$TARGET    \
 	--target=$TARGET  \
+	--host=$TARGET    \
 	--prefix=/usr     \
 	--sysconfdir=/etc \
 	--disable-efiemu  \
 	--disable-werror
-
-# Workaround
-sed -i '/^HOST_CFLAGS=*/ s/$/ -m32/' Makefile
-
 make -j${JOBS}
 
 # Installing
