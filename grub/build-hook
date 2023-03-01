@@ -2,7 +2,7 @@
 
 set -e
 
-unset CC LD
+unset CC CFLAGS LD
 export LDFLAGS="-static"
 
 ./configure           \
