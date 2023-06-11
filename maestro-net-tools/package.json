@@ -1,0 +1,17 @@
+{
+	"sources": [
+		{
+			"location": "/",
+			"git_url": "https://github.com/llenotre/maestro-net-tools"
+		}
+	],
+	"package": {
+		"name": "maestro-net-tools",
+		"version": "0.1",
+
+		"description": "Maestro-net-tools contains network utility commands for the Maestro OS.",
+
+		"build_deps": [],
+		"run_deps": []
+	}
+}

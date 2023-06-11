@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+
+
+# Compiling
+cargo build --target $TARGET -Zbuild-std --release
+
+
+
+# Installing
+mkdir -p $SYSROOT/sbin
+# TODO Iterate on all executables
+cp target/$TARGET/release/ping $SYSROOT/usr/bin
