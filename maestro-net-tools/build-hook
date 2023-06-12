@@ -5,11 +5,12 @@ set -e
 
 
 # Compiling
-cargo build --target $TARGET -Zbuild-std --release
+# FIXME: compilation of panic_abort is required only because of a Cargo bug. remove when fixed
+cargo build --target $TARGET -Zbuild-std=std,panic_abort --release
 
 
 
 # Installing
-mkdir -p $SYSROOT/sbin
+mkdir -p $SYSROOT/usr/bin
 # TODO Iterate on all executables
 cp target/$TARGET/release/ping $SYSROOT/usr/bin
