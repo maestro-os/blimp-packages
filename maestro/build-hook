@@ -2,8 +2,8 @@
 
 set -e
 
-# Installing
 mkdir -p $SYSROOT/boot
-cp -v /usr/src/maestro/maestro $SYSROOT/boot/
+# TODO add support for other architectures
+cp -v /usr/src/maestro/target/x86/maestro $SYSROOT/boot/
 
 # TODO Add grub entry

@@ -2,24 +2,10 @@
 
 set -e
 
-# Creating configuration
-# TODO Adapt arch to TARGET
-cat >.config <<EOF
-GENERAL_ARCH="x86"
-GENERAL_SCHEDULER_END_PANIC="true"
-DEBUG_DEBUG="false"
-DEBUG_TEST="false"
-DEBUG_TESTPROCESS="false"
-DEBUG_STORAGETEST="false"
-DEBUG_QEMU="false"
-DEBUG_MALLOC_MAGIC="false"
-DEBUG_MALLOC_CHECK="false"
-DEBUG_RUST_BACKTRACE="false"
-EOF
+cp -v default.config.toml config.toml
 
-make maestro
+cargo build --release --target $TARGET
 
 mkdir -p $SYSROOT/usr/src/maestro
 cp -rv * $SYSROOT/usr/src/maestro/
-cp -v .config $SYSROOT/usr/src/maestro/
 chmod -R +r $SYSROOT/usr/src/maestro/
