@@ -4,6 +4,6 @@ set -e
 
 mkdir -p $SYSROOT/boot
 # TODO add support for other architectures
-cp -v /usr/src/maestro/target/x86/maestro $SYSROOT/boot/
+cp -v /usr/src/maestro/target/x86/release/maestro $SYSROOT/boot/
 
 # TODO Add grub entry

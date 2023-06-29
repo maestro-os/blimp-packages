@@ -4,7 +4,8 @@ set -e
 
 cp -v default.config.toml config.toml
 
-cargo build --release --target $TARGET
+# TODO support other architectures
+cargo build --release
 
 mkdir -p $SYSROOT/usr/src/maestro
 cp -rv * $SYSROOT/usr/src/maestro/
