@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+# Patch
+patch neofetch "$DESC_PATH/maestro.patch"
+
+# Install
+mkdir -pv "$SYSROOT/usr/bin"
+cp -pv "$SYSROOT/usr/bin/"
