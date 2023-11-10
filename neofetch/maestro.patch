@@ -1,3 +1,7 @@
+933c933
+<         Linux|GNU*)
+---
+>         Linux|GNU*|Maestro)
 7825a7826,7854
 > EOF
 >         ;;
