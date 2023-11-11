@@ -6,7 +6,7 @@
 > EOF
 >         ;;
 > 
->         "maestro"|"Maestro")
+>         "maestro"*|"Maestro"*)
 >             set_colors 15 9 11 10 12 13 14 16
 >             read -rd '' ascii_data <<'EOF'
 > ${c6}                                  .
