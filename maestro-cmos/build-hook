@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-PROFILE=release /usr/src/maestro/mod/compile cmos
-
-# TODO get version from selected kernel dependency?
-mkdir -pv $SYSROOT/lib/modules/maestro-1.0/default
-cp -v cmos.kmod $SYSROOT/lib/modules/maestro-1.0/default/
