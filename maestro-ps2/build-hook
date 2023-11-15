@@ -6,5 +6,5 @@ PROFILE=release /usr/src/maestro/mod/build
 
 # TODO support several targets
 # TODO get version from selected kernel dependency?
-mkdir -pv $SYSROOT/lib/modules/maestro-1.0/default
-cp -v target/x86/release/libps2.so $SYSROOT/lib/modules/maestro-1.0/default/ps2.kmod
+mkdir -pv $SYSROOT/lib/modules/maestro-0.1.0/default
+cp -v target/x86/release/libps2.so $SYSROOT/lib/modules/maestro-0.1.0/default/ps2.kmod
