@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+unset CC CFLAGS LD LDFLAGS RUSTFLAGS
 
 PROFILE=release /usr/src/maestro/mod/build
 
