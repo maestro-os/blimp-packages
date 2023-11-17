@@ -2,9 +2,6 @@
 
 set -e
 
-# Patching to support Maestro
-sed -i 's/^	gnu\* |/	gnu* | maestro* |/' support/config.sub
-
 # Compiling
 ./configure --prefix=/ \
 	--host=$TARGET \
