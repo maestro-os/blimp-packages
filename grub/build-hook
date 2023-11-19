@@ -2,8 +2,14 @@
 
 set -e
 
-unset CC CFLAGS LD
-export LDFLAGS="-static"
+if [ ! -z "$CC" ]; then
+	export CC="$CC $CFLAGS"
+	unset CFLAGS
+fi
+if [ ! -z "$LD" ]; then
+	export LD="$LD $LDFLAGS"
+	unset LDFLAGS
+fi
 
 ./configure           \
 	--target=$TARGET  \
