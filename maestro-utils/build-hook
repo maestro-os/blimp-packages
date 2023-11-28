@@ -4,13 +4,13 @@ set -e
 
 
 
-# Compiling
+# Build
 # FIXME: compilation of panic_abort is required only because of a Cargo bug. remove when fixed
-cargo build --target $TARGET -Zbuild-std=std,panic_abort --release
+cargo +nightly build --target $TARGET -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
 
 
 
-# Installing
+# Install
 mkdir -p $SYSROOT/sbin
 # TODO Iterate on all executables
 cp target/$TARGET/release/dmesg $SYSROOT/sbin
