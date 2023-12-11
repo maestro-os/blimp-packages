@@ -28,6 +28,9 @@ cp target/$TARGET/release/su $SYSROOT/sbin
 cp target/$TARGET/release/umount $SYSROOT/sbin
 cp target/$TARGET/release/usrgrp $SYSROOT/sbin
 
+chmod u+s $SYSROOT/sbin/login
+chmod u+s $SYSROOT/sbin/su
+
 ln -s /sbin/fdisk $SYSROOT/sbin/sfdisk
 ln -s /sbin/mkfs $SYSROOT/sbin/mkfs.ext2
 ln -s /sbin/powerctl $SYSROOT/sbin/halt
