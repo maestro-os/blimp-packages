@@ -2,7 +2,7 @@
 	"sources": [
 		{
 			"location": "/",
-			"git_url": "https://github.com/llenotre/maestro_ps2"
+			"git_url": "https://github.com/llenotre/maestro-ps2"
 		}
 	],
 	"package": {
