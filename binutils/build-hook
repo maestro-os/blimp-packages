@@ -1,23 +1,22 @@
 #!/bin/bash
 
 set -e
-
-# Patching to support Maestro
-# TODO
+cd *
 
 mkdir build
 cd build
 
-# Compiling
-../configure --prefix=/usr \
-	--host=$TARGET \
-	--build=$HOST \
-	--disable-nls \
+# Compile
+../configure \
+	--prefix=/usr \
+	--build="$BUILD" \
+	--host="$HOST" \
+	--target="$TARGET" \
 	--enable-shared \
 	--disable-werror \
 	--enable-64-bit-bfd
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install -j1
 install -vm755 libctf/.libs/libctf.so.0.0.0 $SYSROOT/usr/lib

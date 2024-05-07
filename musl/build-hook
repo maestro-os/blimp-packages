@@ -1,15 +1,18 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Compiling
+# Compile
 ./configure \
+	--build="$BUILD" \
+	--host="$HOST" \
 	--target="$TARGET" \
 	--prefix="/usr" \
 	--enable-debug \
-	--enable-optimize= \
+	--enable-optimize \
 	--enable-shared
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install
