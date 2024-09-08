@@ -1,20 +1,15 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Patching to support Maestro
-sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
-
-# Patching to ensure gawk is found first
-sed -i s/mawk// configure
-
-# Suspending CC and CFLAGS
+# Suspend CC and CFLAGS
 TMP_CC=$CC
 TMP_CFLAGS=$CFLAGS
 unset CC
 unset CFLAGS
 
-# Compiling tic
+# Compile tic
 mkdir build
 cd build
 ../configure
@@ -22,13 +17,13 @@ make -C include
 make -C progs tic
 cd ..
 
-# Restoring CC and CFLAGS
+# Restore CC and CFLAGS
 export CC=$TMP_CC
 export CFLAGS=$TMP_CFLAGS
 unset TMP_CC
 unset TMP_CFLAGS
 
-# Compiling ncurses
+# Compile ncurses
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST \
@@ -41,6 +36,6 @@ unset TMP_CFLAGS
 	--enable-widec
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT TIC_PATH=$(pwd)/build/progs/tic install
 echo "INPUT(-lncursesw)" >$SYSROOT/usr/lib/libncurses.so

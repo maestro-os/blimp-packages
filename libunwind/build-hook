@@ -1,16 +1,14 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Patching to support Maestro
-sed -i 's/^	-gnu\* |/	-gnu* | -maestro* |/' config/config.sub
-
-# Compiling
+# Compile
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install
 ln -s bash $SYSROOT/usr/bin/sh

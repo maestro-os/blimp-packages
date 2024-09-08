@@ -2,8 +2,7 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz",
-			"unwrap": true
+			"url": "https://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz"
 		}
 	],
 	"package": {

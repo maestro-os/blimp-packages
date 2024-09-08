@@ -2,14 +2,10 @@
 
 set -e
 
-
-
-# Compiling
+# Compile
 # FIXME: compilation of panic_abort is required only because of a Cargo bug. remove when fixed
 cargo build --bin blimp --release --features network --target $TARGET -Zbuild-std=std,panic_abort
 
-
-
-# Installing
+# Install
 mkdir -pv $SYSROOT/usr/{bin,lib/blimp}
 cp -v target/$TARGET/release/blimp $SYSROOT/usr/bin/blimp

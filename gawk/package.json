@@ -2,8 +2,7 @@
 	"sources": [
 		{
 			"location": "/",
-			"url": "https://ftp.gnu.org/gnu/gawk/gawk-5.1.1.tar.xz",
-			"unwrap": true
+			"url": "https://ftp.gnu.org/gnu/gawk/gawk-5.1.1.tar.xz"
 		}
 	],
 	"package": {

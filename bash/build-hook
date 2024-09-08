@@ -1,14 +1,15 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Compiling
+# Compile
 ./configure --prefix=/ \
 	--host=$TARGET \
 	--build=$HOST \
 	--without-bash-malloc
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install
 ln -sv bash $SYSROOT/bin/sh

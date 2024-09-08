@@ -1,18 +1,16 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Patching to support Maestro
-# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
-
-# Ignoring some useless files
+# Ignore some useless files
 sed -i 's/extras//' Makefile.in
 
-# Compiling
+# Compile
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install

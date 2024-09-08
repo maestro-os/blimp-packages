@@ -2,13 +2,9 @@
 
 set -e
 
-
-
 # Build
 # FIXME: compilation of panic_abort is required only because of a Cargo bug. remove when fixed
 cargo +nightly build --target $TARGET -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
-
-
 
 # Install
 mkdir -p $SYSROOT/usr/bin

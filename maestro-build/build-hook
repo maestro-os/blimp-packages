@@ -1,12 +1,14 @@
 #!/bin/bash
 
 set -e
+cd kernel/
 
-cp -v default.config.toml config.toml
-
+# Compile
 # TODO support other architectures
 cargo build --release
 
+# Install
+cd ..
 mkdir -p $SYSROOT/usr/src/maestro
 cp -rv * $SYSROOT/usr/src/maestro/
 chmod -R +r $SYSROOT/usr/src/maestro/

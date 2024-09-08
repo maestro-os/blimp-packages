@@ -1,8 +1,9 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Compiling
+# Compile
 ./configure --prefix=/usr \
 	--host=$TARGET \
 	--build=$HOST \
@@ -10,5 +11,5 @@ set -e
 	--docdir=/usr/share/doc/xz-5.2.5
 make -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install

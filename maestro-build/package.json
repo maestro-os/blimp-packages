@@ -9,7 +9,7 @@
 		"name": "maestro-build",
 		"version": "1.0",
 
-		"description": "The maestro kernel served with source and build files that are necessary for module compilation",
+		"description": "The Maestro kernel served with source and build files that are necessary for module compilation",
 
 		"build_deps": [],
 		"run_deps": []

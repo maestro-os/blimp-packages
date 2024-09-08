@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+cd *
 
 # Patch
 patch neofetch "$DESC_PATH/maestro.patch"

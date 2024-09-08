@@ -1,9 +1,7 @@
 #!/bin/bash
 
 set -e
-
-# Patching to support Maestro
-sed -i 's/^	gnu\* |/	gnu* | maestro* |/' build-aux/config.sub
+cd *
 
 ./configure --prefix=/usr \
 	--host=$TARGET \

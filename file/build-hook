@@ -1,11 +1,9 @@
 #!/bin/bash
 
 set -e
+cd *
 
-# Patching to support Maestro
-# TODO sed -i 's/^	gnu\* |/	gnu* | maestro* |/' config.sub
-
-# Compiling
+# Compile
 mkdir build
 cd build
 ../configure --disable-bzlib --disable-libseccomp --disable-xzlib --disable-zlib
@@ -15,5 +13,5 @@ cd ..
 ./configure --prefix=/usr --host=$TARGET --build=$HOST
 make FILE_COMPILE=$(pwd)/build/src/file -j${JOBS}
 
-# Installing
+# Install
 make DESTDIR=$SYSROOT install
