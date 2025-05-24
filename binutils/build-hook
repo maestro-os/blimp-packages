@@ -19,4 +19,3 @@ make -j${JOBS}
 
 # Install
 make DESTDIR=$SYSROOT install -j1
-install -vm755 libctf/.libs/libctf.so.0.0.0 $SYSROOT/usr/lib

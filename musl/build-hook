@@ -7,8 +7,7 @@ cd *
 ./configure \
 	--build="$BUILD" \
 	--host="$HOST" \
-	--target="$TARGET" \
-	--prefix="/usr" \
+	--prefix="/" \
 	--enable-debug \
 	--enable-optimize \
 	--enable-shared
