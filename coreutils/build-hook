@@ -3,14 +3,12 @@
 set -e
 cd *
 
-# Compile
 ./configure --prefix=/usr \
-	--host=$TARGET \
-	--build=$HOST \
+	--host=$HOST \
+	--build=$BUILD \
 	--enable-install-program=hostname
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install
 
 mkdir -p $SYSROOT/usr/sbin

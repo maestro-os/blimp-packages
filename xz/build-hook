@@ -3,13 +3,11 @@
 set -e
 cd *
 
-# Compile
 ./configure --prefix=/usr \
-	--host=$TARGET \
-	--build=$HOST \
+	--host=$HOST \
+	--build=$BUILD \
 	--disable-static \
 	--docdir=/usr/share/doc/xz-5.2.5
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install

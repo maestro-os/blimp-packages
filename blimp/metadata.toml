@@ -1,0 +1,8 @@
+[package]
+name = "blimp"
+version = "0.1"
+description = "Blimp is a package manager for Unix systems"
+
+[[source]]
+location = "/"
+git_url = "https://github.com/maestro-os/blimp"

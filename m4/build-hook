@@ -4,7 +4,7 @@ set -e
 cd *
 
 ./configure --prefix=/usr \
-	--host=$TARGET \
-	--build=$HOST
+	--host=$HOST \
+	--build=$BUILD
 make -j${JOBS}
 make DESTDIR=$SYSROOT install

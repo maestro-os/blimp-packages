@@ -1,0 +1,8 @@
+[package]
+name = "maestro"
+version = "1.0"
+description = "Maestro is a lightweight Unix-like kernel written in Rust"
+
+[[package.build_dep]]
+name = "maestro-build"
+version = "1.0"

@@ -1,0 +1,8 @@
+[package]
+name = "musl"
+version = "1.2.5"
+description = "musl is an implementation of the C standard library built on top of the Linux system call API, including interfaces defined in the base language standard, POSIX, and widely agreed-upon extensions"
+
+[[source]]
+location = "/"
+url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"

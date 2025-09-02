@@ -3,11 +3,9 @@
 set -e
 cd kernel/
 
-# Compile
 # TODO support other architectures
 cargo build --release
 
-# Install
 cd ..
 mkdir -p $SYSROOT/usr/src/maestro
 cp -rv * $SYSROOT/usr/src/maestro/

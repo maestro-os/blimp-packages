@@ -2,10 +2,8 @@
 
 set -e
 
-# Build
-cargo +nightly build --target $TARGET -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
+cargo +nightly build --target $HOST -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
 
-# Install
 mkdir -p $SYSROOT/sbin
 mkdir -p $SYSROOT/etc/solfege/services
 
@@ -18,4 +16,4 @@ ln -sv /proc/self/mounts $SYSROOT/etc/mtab
 
 echo '/sbin/login' >$SYSROOT/etc/solfege/startup
 
-cp target/$TARGET/release/solfege $SYSROOT/sbin/init
+cp target/$HOST/release/solfege $SYSROOT/sbin/init

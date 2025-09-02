@@ -6,7 +6,6 @@ cd *
 mkdir build
 cd build
 
-# Compile
 ../configure \
 	--prefix=/usr \
 	--build="$BUILD" \
@@ -17,5 +16,4 @@ cd build
 	--enable-64-bit-bfd
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install -j1

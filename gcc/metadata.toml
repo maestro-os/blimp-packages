@@ -1,0 +1,8 @@
+[package]
+name = "gcc"
+version = "13.2.0"
+description = "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...)"
+
+[[source]]
+location = "/"
+url = "https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.gz"

@@ -1,0 +1,8 @@
+[package]
+name = "xz"
+version = "5.2.5"
+description = "XZ Utils is free general-purpose data compression software with a high compression ratio"
+
+[[source]]
+location = "/"
+url = "https://altushost-swe.dl.sourceforge.net/project/lzmautils/xz-5.2.5.tar.xz"
