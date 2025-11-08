@@ -5,4 +5,4 @@ description = "XZ Utils is free general-purpose data compression software with a
 
 [[source]]
 location = "/"
-url = "https://netcologne.dl.sourceforge.net/project/lzmautils/xz-5.8.1.tar.xz?viasf=1"
+url = "https://altushost-swe.dl.sourceforge.net/project/lzmautils/xz-5.8.1.tar.xz?viasf=1"

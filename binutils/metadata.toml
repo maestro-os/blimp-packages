@@ -3,6 +3,6 @@ name = "binutils"
 version = "2.44"
 description = "The GNU Binutils are a collection of binary tools"
 
-[[sources]]
+[[source]]
 location = "/"
 url = "https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.gz"
