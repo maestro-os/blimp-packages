@@ -1,0 +1,8 @@
+[package]
+name = "expat"
+version = "2.7.5"
+description = "A C99 library for parsing XML 1.0 Fourth Edition."
+
+[[source]]
+location = "/"
+url = "https://github.com/libexpat/libexpat/releases/download/R_2_7_5/expat-2.7.5.tar.xz"

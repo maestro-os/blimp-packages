@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+cd *
+
+AR=${HOST}-ar CC=${HOST}-gcc ./configure \
+	--prefix=/usr/local \
+	--host=$HOST
+
+make -j${JOBS}
+make DESTDIR="$SYSROOT" install

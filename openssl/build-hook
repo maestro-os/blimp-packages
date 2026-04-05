@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+cd *
+
+export CC="${HOST}-gcc"
+export AR="${HOST}-ar"
+export RANLIB="${HOST}-ranlib"
+
+./Configure "linux-${HOST%%-*}" --prefix=/usr/local
+
+make -j${JOBS}
+make DESTDIR="$SYSROOT" install
