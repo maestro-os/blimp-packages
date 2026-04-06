@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure --prefix=/usr --host=$HOST
+
+make -j${JOBS}
+make DESTDIR="$SYSROOT" install

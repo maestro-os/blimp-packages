@@ -3,12 +3,11 @@
 set -e
 cd *
 
-# Compile
+patch -p1 <"$DESC_PATH/getenv.patch"
+
 ./configure --prefix=/usr \
-	--without-guile \
-	--host=$TARGET \
-	--build=$HOST
+	--host=$HOST \
+	--build=$BUILD
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install

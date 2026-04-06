@@ -1,0 +1,8 @@
+[package]
+name = "openssl"
+version = "3.6.1"
+description = "The OpenSSL software library is a robust, commercial-grade, full-featured toolkit for general-purpose cryptography and secure communication."
+
+[[source]]
+location = "/"
+url = "https://github.com/openssl/openssl/releases/download/openssl-3.6.1/openssl-3.6.1.tar.gz"

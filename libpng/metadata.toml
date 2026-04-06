@@ -1,0 +1,8 @@
+[package]
+name = "libpng"
+version = "1.6.56"
+description = "libpng is the official PNG reference library."
+
+[[source]]
+location = "/"
+url = "https://unlimited.dl.sourceforge.net/project/libpng/libpng16/1.6.56/libpng-1.6.56.tar.xz?viasf=1"

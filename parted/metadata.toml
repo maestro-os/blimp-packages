@@ -1,0 +1,8 @@
+[package]
+name = "parted"
+version = "3.5"
+description = "GNU Parted manipulates partition tables. This is useful for creating space for new operating systems, reorganizing disk usage, copying data on hard disks and disk imaging"
+
+[[source]]
+location = "/"
+url = "https://ftp.gnu.org/gnu/parted/parted-3.5.tar.xz"

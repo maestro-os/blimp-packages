@@ -3,9 +3,7 @@
 set -e
 cd *
 
-# Compile
-./configure --prefix=/usr --host=$TARGET
+./configure --prefix=/usr --host=$HOST
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install

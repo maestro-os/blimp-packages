@@ -12,14 +12,13 @@ if [ ! -z "$LD" ]; then
 	unset LDFLAGS
 fi
 
-./configure         \
+./configure           \
 	--target=$TARGET  \
-	--host=$TARGET    \
+	--host=$HOST      \
 	--prefix=/usr     \
 	--sysconfdir=/etc \
 	--disable-efiemu  \
 	--disable-werror
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install

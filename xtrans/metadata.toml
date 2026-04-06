@@ -1,0 +1,8 @@
+[package]
+name = "xtrans"
+version = "1.6.0"
+description = "The X.Org project provides an open source implementation of the X Window System."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/lib/xtrans-1.6.0.tar.xz"

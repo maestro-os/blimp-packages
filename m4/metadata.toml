@@ -1,0 +1,8 @@
+[package]
+name = "m4"
+version = "1.4.20"
+description = "GNU M4 is an implementation of the traditional Unix macro processor"
+
+[[source]]
+location = "/"
+url = "https://ftp.gnu.org/gnu/m4/m4-1.4.20.tar.gz"

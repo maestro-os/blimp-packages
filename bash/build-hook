@@ -3,13 +3,11 @@
 set -e
 cd *
 
-# Compile
 ./configure --prefix=/ \
-	--host=$TARGET \
-	--build=$HOST \
+	--build=$BUILD \
+	--host=$HOST \
 	--without-bash-malloc
 make -j${JOBS}
 
-# Install
 make DESTDIR=$SYSROOT install
 ln -sv bash $SYSROOT/bin/sh

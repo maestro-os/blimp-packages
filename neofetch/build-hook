@@ -3,9 +3,7 @@
 set -e
 cd *
 
-# Patch
 patch neofetch "$DESC_PATH/maestro.patch"
 
-# Install
 mkdir -pv "$SYSROOT/usr/bin"
 cp -pv neofetch "$SYSROOT/usr/bin/"

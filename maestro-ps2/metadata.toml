@@ -1,0 +1,12 @@
+[package]
+name = "maestro-ps2"
+version = "1.0"
+description = "Maestro kernel module for PS/2 devices"
+
+[[package.build_dep]]
+name = "maestro-build"
+version = "1.0"
+
+[[source]]
+location = "/"
+git_url = "https://github.com/maestro-os/maestro-ps2"

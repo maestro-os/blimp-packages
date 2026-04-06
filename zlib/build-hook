@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+cd *
+
+LDFLAGS="-L$SYSROOT/usr/local/lib" CPPFLAGS="-I$SYSROOT/usr/local/include" ./configure \
+	--prefix=/usr \
+	--host=$HOST
+
+make -j${JOBS}
+make DESTDIR="$SYSROOT" install

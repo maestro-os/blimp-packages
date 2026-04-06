@@ -1,0 +1,8 @@
+[package]
+name = "coreutils"
+version = "9.0"
+description = "The GNU Core Utilities are the basic file shell and text manipulation utilities of the GNU operating system"
+
+[[source]]
+location = "/"
+url = "https://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz"

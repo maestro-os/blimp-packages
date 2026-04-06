@@ -1,0 +1,8 @@
+[package]
+name = "libunwind"
+version = "1.6.2"
+description = "A portable and efficient C programming interface (API) to determine the call-chain of a program"
+
+[[source]]
+location = "/"
+url = "http://download.savannah.nongnu.org/releases/libunwind/libunwind-1.6.2.tar.gz"

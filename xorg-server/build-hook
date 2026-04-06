@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure \
+	--prefix=/usr \
+	--build=$BUILD \
+	--host=$HOST \
+	--localstatedir=/var \
+	--disable-pciaccess \
+	--disable-int10-module \
+	--disable-glamor \
+	--disable-vgahw \
+	--disable-xephyr \
+	--disable-xnest \
+	--with-fontrootdir=/usr/share/fonts/X11
+
+make -j${JOBS}
+make DESTDIR="$SYSROOT" install

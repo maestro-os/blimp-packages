@@ -1,0 +1,8 @@
+[package]
+name = "file"
+version = "5.41"
+description = "The file command is a standard program of Unix and Unix-like operating systems for recognizing the type of data contained in a computer file"
+
+[[source]]
+location = "/"
+url = "https://astron.com/pub/file/file-5.41.tar.gz"
