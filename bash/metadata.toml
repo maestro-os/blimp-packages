@@ -3,6 +3,11 @@ name = "bash"
 version = "5.3"
 description = "Bash is the GNU Project's shell—the Bourne Again SHell"
 
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
 [[source]]
 location = "/"
 url = "https://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz"
