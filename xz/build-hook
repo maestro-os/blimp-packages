@@ -10,4 +10,4 @@ cd *
 	--docdir=/usr/share/doc/xz-5.2.5
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

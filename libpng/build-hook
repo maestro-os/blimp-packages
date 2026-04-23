@@ -6,4 +6,4 @@ cd *
 AR=${HOST}-ar CC=${HOST}-gcc RANLIB=${HOST}-ranlib ./configure --prefix=/usr/local
 
 make -j${JOBS}
-make DESTDIR="$SYSROOT" install
+make DESTDIR="$INSTALL_PATH" install

@@ -37,5 +37,5 @@ unset TMP_CFLAGS
 make -j${JOBS}
 
 # Install
-make DESTDIR=$SYSROOT TIC_PATH=$(pwd)/build/progs/tic install
-echo "INPUT(-lncursesw)" >$SYSROOT/usr/lib/libncurses.so
+make DESTDIR=$INSTALL_PATH TIC_PATH=$(pwd)/build/progs/tic install
+echo "INPUT(-lncursesw)" >$INSTALL_PATH/usr/lib/libncurses.so

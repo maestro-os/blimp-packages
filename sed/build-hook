@@ -6,4 +6,4 @@ cd *
 ./configure --prefix=/usr --host=$HOST
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

@@ -8,4 +8,4 @@ AR=${HOST}-ar CC=${HOST}-gcc ./configure \
 	--host=$HOST
 
 make -j${JOBS}
-make DESTDIR="$SYSROOT" install
+make DESTDIR="$INSTALL_PATH" install

@@ -5,5 +5,5 @@ cd *
 
 patch neofetch "$DESC_PATH/maestro.patch"
 
-mkdir -pv "$SYSROOT/usr/bin"
-cp -pv neofetch "$SYSROOT/usr/bin/"
+mkdir -pv "$INSTALL_PATH/usr/bin"
+cp -pv neofetch "$INSTALL_PATH/usr/bin/"

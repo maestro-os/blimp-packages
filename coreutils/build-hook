@@ -9,11 +9,11 @@ cd *
 	--enable-install-program=hostname
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install
 
-mkdir -p $SYSROOT/usr/sbin
-mv $SYSROOT/usr/bin/chroot $SYSROOT/usr/sbin
+mkdir -p $INSTALL_PATH/usr/sbin
+mv $INSTALL_PATH/usr/bin/chroot $INSTALL_PATH/usr/sbin
 
-mkdir -p $SYSROOT/usr/share/man/man8
-mv $SYSROOT/usr/share/man/man1/chroot.1 $SYSROOT/usr/share/man/man8/chroot.8
-sed -i 's/"1"/"8"/' $SYSROOT/usr/share/man/man8/chroot.8
+mkdir -p $INSTALL_PATH/usr/share/man/man8
+mv $INSTALL_PATH/usr/share/man/man1/chroot.1 $INSTALL_PATH/usr/share/man/man8/chroot.8
+sed -i 's/"1"/"8"/' $INSTALL_PATH/usr/share/man/man8/chroot.8

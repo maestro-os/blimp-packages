@@ -7,6 +7,6 @@ cd kernel/
 cargo build --release
 
 cd ..
-mkdir -p $SYSROOT/usr/src/maestro
-cp -rv * $SYSROOT/usr/src/maestro/
-chmod -R +r $SYSROOT/usr/src/maestro/
+mkdir -p $INSTALL_PATH/usr/src/maestro
+cp -rv * $INSTALL_PATH/usr/src/maestro/
+chmod -R +r $INSTALL_PATH/usr/src/maestro/

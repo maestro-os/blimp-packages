@@ -8,4 +8,4 @@ LDFLAGS="-L$SYSROOT/usr/local/lib" CPPFLAGS="-I$SYSROOT/usr/local/include" ./con
 	--host=$HOST
 
 make -j${JOBS}
-make DESTDIR="$SYSROOT" install
+make DESTDIR="$INSTALL_PATH" install

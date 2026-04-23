@@ -10,4 +10,4 @@ export RANLIB="${HOST}-ranlib"
 ./Configure "linux-${HOST%%-*}" --prefix=/usr/local
 
 make -j${JOBS}
-make DESTDIR="$SYSROOT" install
+make DESTDIR="$INSTALL_PATH" install

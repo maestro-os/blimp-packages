@@ -12,4 +12,4 @@ cd ..
 ./configure --prefix=/usr --host=$HOST --build=$BUILD
 make FILE_COMPILE=$(pwd)/build/src/file -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

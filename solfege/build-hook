@@ -4,16 +4,16 @@ set -e
 
 cargo +nightly build --target $HOST -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --release
 
-mkdir -p $SYSROOT/sbin
-mkdir -p $SYSROOT/etc/solfege/services
+mkdir -p $INSTALL_PATH/sbin
+mkdir -p $INSTALL_PATH/etc/solfege/services
 
-cat >$SYSROOT/etc/fstab <<EOF
+cat >$INSTALL_PATH/etc/fstab <<EOF
 # <file system> <dir> <type> <options> <dump> <pass>
 tmpfs			/tmp	tmpfs	rw		0		0
 procfs			/proc	procfs	rw		0		1
 EOF
-ln -sv /proc/self/mounts $SYSROOT/etc/mtab
+ln -sv /proc/self/mounts $INSTALL_PATH/etc/mtab
 
-echo '/sbin/login' >$SYSROOT/etc/solfege/startup
+echo '/sbin/login' >$INSTALL_PATH/etc/solfege/startup
 
-cp target/$HOST/release/solfege $SYSROOT/sbin/init
+cp target/$HOST/release/solfege $INSTALL_PATH/sbin/init

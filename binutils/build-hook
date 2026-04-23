@@ -16,4 +16,4 @@ cd build
 	--enable-64-bit-bfd
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install -j1
+make DESTDIR=$INSTALL_PATH install -j1

@@ -17,7 +17,7 @@ ln -s ../../../libgcc/gthr-posix.h $HOST/libgcc/gthr-default.h
 	--host=$HOST \
 	--target=$TARGET \
 	CC_FOR_TARGET=$TARGET-gcc \
-	--with-build-sysroot=$BUILD_SYSROOT \
+	--with-build-sysroot=$SYSROOT \
 	--enable-initfini-array \
 	--disable-nls \
 	--disable-multilib \
@@ -31,5 +31,5 @@ ln -s ../../../libgcc/gthr-posix.h $HOST/libgcc/gthr-default.h
 	--enable-languages=c,c++
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
-ln -s gcc $SYSROOT/usr/bin/cc
+make DESTDIR=$INSTALL_PATH install
+ln -s gcc $INSTALL_PATH/usr/bin/cc

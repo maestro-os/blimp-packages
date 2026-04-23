@@ -7,4 +7,4 @@ cd *
 	--host=$HOST \
 	--build=$BUILD
 make -j${JOBS}
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

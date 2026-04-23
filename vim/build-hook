@@ -13,4 +13,4 @@ echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' >>src/feature.h
 			--with-tlib=ncursesw
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

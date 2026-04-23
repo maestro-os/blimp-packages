@@ -5,35 +5,35 @@ set -e
 # FIXME: compilation of panic_abort is required only because of a Cargo bug. remove when fixed
 cargo build --target $HOST -Zbuild-std=std,panic_abort --release
 
-mkdir -p $SYSROOT/sbin
+mkdir -p $INSTALL_PATH/sbin
 # TODO Iterate on all executables
-cp target/$TARGET/release/dmesg $SYSROOT/sbin
-cp target/$TARGET/release/fdisk $SYSROOT/sbin
-cp target/$TARGET/release/insmod $SYSROOT/sbin
-cp target/$TARGET/release/login $SYSROOT/sbin
-cp target/$TARGET/release/lsmod $SYSROOT/sbin
-cp target/$TARGET/release/mkfs $SYSROOT/sbin
-cp target/$TARGET/release/mount $SYSROOT/sbin
-cp target/$TARGET/release/nologin $SYSROOT/sbin
-cp target/$TARGET/release/powerctl $SYSROOT/sbin
-cp target/$TARGET/release/ps $SYSROOT/sbin
-cp target/$TARGET/release/rmmod $SYSROOT/sbin
-cp target/$TARGET/release/su $SYSROOT/sbin
-cp target/$TARGET/release/umount $SYSROOT/sbin
-cp target/$TARGET/release/usrgrp $SYSROOT/sbin
+cp target/$TARGET/release/dmesg $INSTALL_PATH/sbin
+cp target/$TARGET/release/fdisk $INSTALL_PATH/sbin
+cp target/$TARGET/release/insmod $INSTALL_PATH/sbin
+cp target/$TARGET/release/login $INSTALL_PATH/sbin
+cp target/$TARGET/release/lsmod $INSTALL_PATH/sbin
+cp target/$TARGET/release/mkfs $INSTALL_PATH/sbin
+cp target/$TARGET/release/mount $INSTALL_PATH/sbin
+cp target/$TARGET/release/nologin $INSTALL_PATH/sbin
+cp target/$TARGET/release/powerctl $INSTALL_PATH/sbin
+cp target/$TARGET/release/ps $INSTALL_PATH/sbin
+cp target/$TARGET/release/rmmod $INSTALL_PATH/sbin
+cp target/$TARGET/release/su $INSTALL_PATH/sbin
+cp target/$TARGET/release/umount $INSTALL_PATH/sbin
+cp target/$TARGET/release/usrgrp $INSTALL_PATH/sbin
 
-chmod u+s $SYSROOT/sbin/login
-chmod u+s $SYSROOT/sbin/su
+chmod u+s $INSTALL_PATH/sbin/login
+chmod u+s $INSTALL_PATH/sbin/su
 
-ln -s /sbin/fdisk $SYSROOT/sbin/sfdisk
-ln -s /sbin/mkfs $SYSROOT/sbin/mkfs.ext2
-ln -s /sbin/powerctl $SYSROOT/sbin/halt
-ln -s /sbin/powerctl $SYSROOT/sbin/reboot
-ln -s /sbin/powerctl $SYSROOT/sbin/shutdown
-ln -s /sbin/powerctl $SYSROOT/sbin/suspend
-ln -s /sbin/usrgrp $SYSROOT/sbin/useradd
-ln -s /sbin/usrgrp $SYSROOT/sbin/userdel
-ln -s /sbin/usrgrp $SYSROOT/sbin/usermod
-ln -s /sbin/usrgrp $SYSROOT/sbin/groupadd
-ln -s /sbin/usrgrp $SYSROOT/sbin/groupdel
-ln -s /sbin/usrgrp $SYSROOT/sbin/groupmod
+ln -s /sbin/fdisk $INSTALL_PATH/sbin/sfdisk
+ln -s /sbin/mkfs $INSTALL_PATH/sbin/mkfs.ext2
+ln -s /sbin/powerctl $INSTALL_PATH/sbin/halt
+ln -s /sbin/powerctl $INSTALL_PATH/sbin/reboot
+ln -s /sbin/powerctl $INSTALL_PATH/sbin/shutdown
+ln -s /sbin/powerctl $INSTALL_PATH/sbin/suspend
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/useradd
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/userdel
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/usermod
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/groupadd
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/groupdel
+ln -s /sbin/usrgrp $INSTALL_PATH/sbin/groupmod

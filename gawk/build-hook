@@ -10,4 +10,4 @@ sed -i 's/extras//' Makefile.in
   --build=$BUILD
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
+make DESTDIR=$INSTALL_PATH install

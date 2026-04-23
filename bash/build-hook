@@ -9,5 +9,5 @@ cd *
 	--without-bash-malloc
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
-ln -sv bash $SYSROOT/bin/sh
+make DESTDIR=$INSTALL_PATH install
+ln -sv bash $INSTALL_PATH/bin/sh

@@ -7,5 +7,5 @@ set -e
 cargo build --bin blimp --release --target $HOST -Zbuild-std=std,panic_abort
 
 # Install
-mkdir -pv $SYSROOT/usr/{bin,lib/blimp}
-cp -v target/$HOST/release/blimp $SYSROOT/usr/bin/blimp
+mkdir -pv $INSTALL_PATH/usr/{bin,lib/blimp}
+cp -v target/$HOST/release/blimp $INSTALL_PATH/usr/bin/blimp

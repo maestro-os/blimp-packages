@@ -8,5 +8,5 @@ cd *
 	--build=$BUILD
 make -j${JOBS}
 
-make DESTDIR=$SYSROOT install
-ln -s bash $SYSROOT/usr/bin/sh
+make DESTDIR=$INSTALL_PATH install
+ln -s bash $INSTALL_PATH/usr/bin/sh
