@@ -9,27 +9,16 @@ cd *
 mkdir build
 cd build
 
-mkdir -pv $HOST/libgcc
-ln -s ../../../libgcc/gthr-posix.h $HOST/libgcc/gthr-default.h
-
-../configure --prefix=/usr \
-	--build=$BUILD \
-	--host=$HOST \
-	--target=$TARGET \
-	CC_FOR_TARGET=$TARGET-gcc \
-	--with-build-sysroot=$SYSROOT \
-	--enable-initfini-array \
-	--disable-nls \
-	--disable-multilib \
-	--disable-decimal-float \
-	--disable-libatomic \
-	--disable-libgomp \
-	--disable-libquadmath \
-	--disable-libssp \
-	--disable-libvtv \
-	--disable-libstdcxx \
-	--enable-languages=c,c++
+../configure
+	--prefix=/usr            \
+	--enable-languages=c,c++ \
+	--enable-default-pie     \
+	--enable-default-ssp     \
+	--enable-host-pie        \
+	--disable-multilib       \
+	--disable-bootstrap      \
+	--disable-fixincludes    \
+	--with-system-zlib
 make -j${JOBS}
-
 make DESTDIR=$INSTALL_PATH install
 ln -s gcc $INSTALL_PATH/usr/bin/cc
