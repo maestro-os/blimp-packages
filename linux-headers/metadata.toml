@@ -3,6 +3,6 @@ name = "linux-headers"
 version = "6.2"
 description = "Userspace headers of the Linux kernel"
 
-[[sources]]
+[[source]]
 location = "/"
 url = "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.2.tar.xz"
