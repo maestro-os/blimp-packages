@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure \
+	--prefix=/usr \
+	--build=$BUILD \
+	--host=$HOST \
+	--enable-shared
+
+make -j${JOBS}
+make check
+make DESTDIR="$INSTALL_PATH" install

@@ -1,11 +1,11 @@
 [package]
 name = "gcc"
-version = "13.2.0"
+version = "15.2.0"
 description = "The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go, and D, as well as libraries for these languages (libstdc++,...)"
 
 [[source]]
 location = "/"
-url = "https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.gz"
+url = "https://ftp.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.gz"
 
 [[package.dep]]
 type = "build-and-run"
@@ -41,3 +41,23 @@ version = "*"
 type = "build"
 name = "bootstrap-gcc"
 version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "gmp"
+version = "6.3.0"
+
+[[package.dep]]
+type = "build-and-run"
+name = "mpfr"
+version = "4.1.0"
+
+[[package.dep]]
+type = "build-and-run"
+name = "mpc"
+version = "1.2.1"
+
+[[package.dep]]
+type = "build-and-run"
+name = "isl"
+version = "0.24"

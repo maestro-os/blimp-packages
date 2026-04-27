@@ -1,0 +1,48 @@
+[package]
+name = "gmp"
+version = "6.3.0"
+description = "GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers."
+
+[[source]]
+location = "/"
+url = "https://gcc.gnu.org/pub/gcc/infrastructure/gmp-6.3.0.tar.bz2"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-libstdc++"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

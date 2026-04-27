@@ -1,0 +1,18 @@
+[package]
+name = "isl"
+version = "0.24"
+description = "isl is a library for manipulating sets and relations of integer points bounded by linear constraints."
+
+[[source]]
+location = "/"
+url = "https://gcc.gnu.org/pub/gcc/infrastructure/isl-0.24.tar.bz2"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "gmp"
+version = "6.2.1"

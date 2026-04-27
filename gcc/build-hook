@@ -3,9 +3,6 @@
 set -e
 cd *
 
-# TODO use build dependencies instead
-./contrib/download_prerequisites
-
 mkdir build
 cd build
 

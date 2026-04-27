@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+cd *
+
+CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu++17" ./configure \
+	--prefix=/usr \
+	--host=$HOST \
+	--enable-cxx \
+	--disable-static
+
+make -j${JOBS}
+make check
+make DESTDIR="$INSTALL_PATH" install

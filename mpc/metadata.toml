@@ -1,0 +1,23 @@
+[package]
+name = "mpc"
+version = "1.2.1"
+description = "GNU MPC is a C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result."
+
+[[source]]
+location = "/"
+url = "https://gcc.gnu.org/pub/gcc/infrastructure/mpc-1.2.1.tar.gz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "gmp"
+version = "6.2.1"
+
+[[package.dep]]
+type = "build-and-run"
+name = "mpfr"
+version = "4.1.0"
