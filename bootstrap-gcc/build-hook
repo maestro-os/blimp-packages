@@ -3,7 +3,6 @@
 set -e
 cd *
 
-# TODO use `source` in `metadata.toml`
 ./contrib/download_prerequisites
 
 # Patch
@@ -18,27 +17,24 @@ mkdir build
 cd build
 
 ../configure \
-	--prefix="/usr"                 \
-	--build="$BUILD"                \
-	--host="$HOST"                  \
-	--target="$TARGET"              \
-	--with-build-sysroot="$SYSROOT" \
-	--disable-nls                   \
-	--disable-multilib              \
-	--disable-libatomic             \
-	--disable-libgomp               \
-	--disable-libquadmath           \
-	--disable-libssp                \
-	--disable-libvtv                \
-	--enable-default-pie            \
-	--enable-default-ssp            \
+	--prefix="/usr"                          \
+	--build="$BUILD"                         \
+	--host="$HOST"                           \
+	--target="$TARGET"                       \
+	LDFLAGS_FOR_TARGET=-L$PWD/$TARGET/libgcc \
+	--with-build-sysroot="$SYSROOT"          \
+	--disable-nls                            \
+	--disable-multilib                       \
+	--disable-libatomic                      \
+	--disable-libgomp                        \
+	--disable-libquadmath                    \
+	--disable-libssp                         \
+	--disable-libvtv                         \
+	--enable-default-pie                     \
+	--enable-default-ssp                     \
 	--enable-languages=c,c++
 
-make -j$JOBS all-gcc
-make DESTDIR="$INSTALL_PATH" install-gcc
-make -j$JOBS all-target-libgcc
-make DESTDIR="$INSTALL_PATH" install-target-libgcc
-make -j$JOBS all-target-libstdc++-v3
-make DESTDIR="$INSTALL_PATH" install-target-libstdc++-v3
+make -j$JOBS
+make DESTDIR="$INSTALL_PATH" install
 
-ln -fsv gcc "$INSTALL_PATH/usr/bin/cc"
+ln -sv gcc "$INSTALL_PATH/usr/bin/cc"

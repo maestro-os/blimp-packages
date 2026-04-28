@@ -3,8 +3,10 @@
 set -e
 cd *
 
-./configure --prefix=/usr \
+./configure \
+	--prefix=/usr \
 	--host=$HOST \
 	--build=$BUILD
+
 make -j${JOBS}
 make DESTDIR=$INSTALL_PATH install

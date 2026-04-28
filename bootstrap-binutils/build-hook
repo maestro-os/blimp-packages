@@ -18,4 +18,14 @@ cd build
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install -j1
+
+# `make install` triggers libtool's DESTDIR relink, which appends `-L/usr/lib`
+# to the link line and pulls in the host's glibc on distros where /usr/lib
+# is the actual lib dir (e.g. Arch). Overwrite the corrupted shared libs with
+# the unrelinked build-dir copies; their stale RPATH points at a build dir
+# that won't exist at runtime, so the loader falls back to /usr/lib in the target.
+cp -fv bfd/.libs/libbfd-*.so "$INSTALL_PATH/usr/lib/"
+cp -fv opcodes/.libs/libopcodes-*.so "$INSTALL_PATH/usr/lib/"
+cp -fv libctf/.libs/libctf.so.*.*.* "$INSTALL_PATH/usr/lib/"
+
 rm -v "$INSTALL_PATH/usr/lib/lib"{bfd,ctf,ctf-nobfd,opcodes}.{a,la}

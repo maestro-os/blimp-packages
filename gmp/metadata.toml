@@ -29,17 +29,17 @@ version = "*"
 
 [[package.dep]]
 type = "build"
+name = "m4"
+version = "*"
+
+[[package.dep]]
+type = "build"
 name = "sed"
 version = "*"
 
 [[package.dep]]
 type = "build"
 name = "bootstrap-binutils"
-version = "*"
-
-[[package.dep]]
-type = "build"
-name = "bootstrap-libstdc++"
 version = "*"
 
 [[package.dep]]

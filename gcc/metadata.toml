@@ -34,11 +34,6 @@ version = "*"
 
 [[package.dep]]
 type = "build"
-name = "bootstrap-libstdc++"
-version = "*"
-
-[[package.dep]]
-type = "build"
 name = "bootstrap-gcc"
 version = "*"
 

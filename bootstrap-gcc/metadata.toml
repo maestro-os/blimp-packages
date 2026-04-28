@@ -14,5 +14,5 @@ version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "bootstrap-libstdc++"
+name = "musl"
 version = "*"
