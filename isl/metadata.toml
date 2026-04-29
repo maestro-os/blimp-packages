@@ -16,3 +16,18 @@ version = "*"
 type = "build-and-run"
 name = "gmp"
 version = "6.2.1"
+
+[[package.dep]]
+type = "build"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"

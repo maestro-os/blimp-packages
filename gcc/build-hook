@@ -6,7 +6,7 @@ cd *
 mkdir build
 cd build
 
-../configure
+../configure \
 	--prefix=/usr            \
 	--enable-languages=c,c++ \
 	--enable-default-pie     \
