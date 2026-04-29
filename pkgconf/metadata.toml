@@ -1,0 +1,58 @@
+[package]
+name = "pkgconf"
+version = "2.5.1"
+description = "pkgconf is a program which helps to configure compiler and linker flags for development frameworks."
+
+[[source]]
+location = "/"
+url = "https://distfiles.ariadne.space/pkgconf/pkgconf-2.5.1.tar.xz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"
