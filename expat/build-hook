@@ -3,9 +3,10 @@
 set -e
 cd *
 
-AR=${HOST}-ar CC=${HOST}-gcc ./configure \
-	--prefix=/usr/local \
-	--host=$HOST
+./configure \
+	--prefix=/usr \
+	--host=$HOST \
+	--docdir=/usr/share/doc/expat-$VERSION
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install
