@@ -3,9 +3,7 @@
 set -e
 cd *
 
-LDFLAGS="-L$SYSROOT/usr/local/lib" CPPFLAGS="-I$SYSROOT/usr/local/include" ./configure \
-	--prefix=/usr \
-	--host=$HOST
+./configure --prefix=/usr
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install

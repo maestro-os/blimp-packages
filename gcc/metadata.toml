@@ -29,6 +29,11 @@ version = "*"
 
 [[package.dep]]
 type = "build"
+name = "tar"
+version = "*"
+
+[[package.dep]]
+type = "build"
 name = "bootstrap-binutils"
 version = "*"
 
