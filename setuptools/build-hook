@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+cd *
+
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps "$(pwd)"
+
+pip3 install \
+	--no-index \
+	--no-deps \
+	--find-links dist \
+	--root="$INSTALL_PATH" \
+	--prefix=/usr \
+	setuptools

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+cd *
+
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $(pwd)
+
+pip3 install \
+	--no-index \
+	--no-deps \
+	--find-links dist \
+	--root="$INSTALL_PATH" \
+	--prefix=/usr \
+	meson
+install -vDm644 data/shell-completions/bash/meson "$INSTALL_PATH/usr/share/bash-completion/completions/meson"
+install -vDm644 data/shell-completions/zsh/_meson "$INSTALL_PATH/usr/share/zsh/site-functions/_meson"

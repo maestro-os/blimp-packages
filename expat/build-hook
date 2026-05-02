@@ -6,7 +6,7 @@ cd *
 ./configure \
 	--prefix=/usr \
 	--host=$HOST \
-	--docdir=/usr/share/doc/expat-$VERSION
+	--docdir=/usr/share/doc/expat-$PKG_VERSION
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install

@@ -7,7 +7,7 @@ cd *
 	--prefix=/usr \
 	--disable-static \
 	--host=$HOST \
-	--docdir="/usr/share/doc/pkgconf-$VERSION"
+	--docdir="/usr/share/doc/pkgconf-$PKG_VERSION"
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install

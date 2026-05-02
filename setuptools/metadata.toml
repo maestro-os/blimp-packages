@@ -1,0 +1,23 @@
+[package]
+name = "setuptools"
+version = "82.0.0"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+
+[[source]]
+location = "/"
+url = "https://pypi.org/packages/source/s/setuptools/setuptools-82.0.0.tar.gz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "python"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "zlib"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"

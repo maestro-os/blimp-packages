@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+cd *
+
+# Ensure symbolic links are relative
+sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+# Ensure man pages are installed at the correct location
+sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
+
+make -f Makefile-libbz2_so
+make clean
+
+make -j${JOBS}
+
+make PREFIX="$INSTALL_PATH/usr" install
+cp -av libbz2.so.* "$INSTALL_PATH/usr/lib"
+ln -sfv "libbz2.so.$PKG_VERSION" "$INSTALL_PATH/usr/lib/libbz2.so"
+
+cp -v bzip2-shared "$INSTALL_PATH/usr/bin/bzip2"
+for i in "$INSTALL_PATH/usr/bin/"{bzcat,bunzip2}; do
+  ln -sfv bzip2 $i
+done
+
+rm -fv "$INSTALL_PATH/usr/lib/libbz2.a"

@@ -1,11 +1,11 @@
 [package]
-name = "openssl"
-version = "3.6.1"
-description = "The OpenSSL software library is a robust, commercial-grade, full-featured toolkit for general-purpose cryptography and secure communication."
+name = "bzip2"
+version = "1.0.8"
+description = "bzip2 is a freely available, patent free, high-quality data compressor."
 
 [[source]]
 location = "/"
-url = "https://github.com/openssl/openssl/releases/download/openssl-3.6.1/openssl-3.6.1.tar.gz"
+url = "https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz"
 
 [[package.dep]]
 type = "build-and-run"
@@ -24,7 +24,17 @@ version = "*"
 
 [[package.dep]]
 type = "build"
-name = "perl"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
 version = "*"
 
 [[package.dep]]

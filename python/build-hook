@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure                \
+	--prefix=/usr          \
+	--enable-shared        \
+	--with-system-expat    \
+	--enable-optimizations \
+	--without-static-libpython
+
+make -j${JOBS}
+make DESTDIR=$INSTALL_PATH install
+
+mkdir -pv "$INSTALL_PATH/etc"
+cat >$INSTALL_PATH/etc/pip.conf <<EOF
+[global]
+root-user-action = ignore
+disable-pip-version-check = true
+EOF

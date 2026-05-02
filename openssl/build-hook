@@ -3,11 +3,12 @@
 set -e
 cd *
 
-export CC="${HOST}-gcc"
-export AR="${HOST}-ar"
-export RANLIB="${HOST}-ranlib"
-
-./Configure "linux-${HOST%%-*}" --prefix=/usr/local
+./config \
+	--prefix=/usr         \
+	--openssldir=/etc/ssl \
+	--libdir=lib          \
+	shared                \
+	zlib-dynamic
 
 make -j${JOBS}
 make DESTDIR="$INSTALL_PATH" install
