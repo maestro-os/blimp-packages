@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+cd *
+
+mkdir build/
+cd build/
+
+meson setup --prefix=/usr --buildtype=release ..
+ninja
+
+DESTDIR="$INSTALL_PATH" ninja install

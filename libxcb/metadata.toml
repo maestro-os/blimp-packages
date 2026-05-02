@@ -1,41 +1,11 @@
 [package]
-name = "xorg-server"
-version = "21.1.21"
-description = "The X.Org project provides an open source implementation of the X Window System."
+name = "libxcb"
+version = "1.17.0"
+description = "X protocol C-language Binding"
 
 [[source]]
 location = "/"
-url = "https://www.x.org/releases/individual/xserver/xorg-server-21.1.21.tar.xz"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libx11"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxcb"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxfont2"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxkbfile"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxcvt"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libpciaccess"
-version = "*"
+url = "https://www.x.org/releases/individual/lib/libxcb-1.17.0.tar.xz"
 
 [[package.dep]]
 type = "build-and-run"
@@ -44,7 +14,17 @@ version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "pixman"
+name = "libxau"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "xcb-proto"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "xorgproto"
 version = "*"
 
 [[package.dep]]
@@ -55,11 +35,6 @@ version = "*"
 [[package.dep]]
 type = "build"
 name = "coreutils"
-version = "*"
-
-[[package.dep]]
-type = "build"
-name = "findutils"
 version = "*"
 
 [[package.dep]]
@@ -80,6 +55,11 @@ version = "*"
 [[package.dep]]
 type = "build"
 name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "python"
 version = "*"
 
 [[package.dep]]

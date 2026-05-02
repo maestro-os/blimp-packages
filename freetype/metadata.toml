@@ -1,41 +1,11 @@
 [package]
-name = "xorg-server"
-version = "21.1.21"
-description = "The X.Org project provides an open source implementation of the X Window System."
+name = "freetype"
+version = "2.14.3"
+description = "A freely available software library to render fonts"
 
 [[source]]
 location = "/"
-url = "https://www.x.org/releases/individual/xserver/xorg-server-21.1.21.tar.xz"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libx11"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxcb"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxfont2"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxkbfile"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxcvt"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libpciaccess"
-version = "*"
+url = "https://download.savannah.nongnu.org/releases/freetype/freetype-2.14.3.tar.xz"
 
 [[package.dep]]
 type = "build-and-run"
@@ -44,7 +14,12 @@ version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "pixman"
+name = "zlib"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "bzip2"
 version = "*"
 
 [[package.dep]]
@@ -55,11 +30,6 @@ version = "*"
 [[package.dep]]
 type = "build"
 name = "coreutils"
-version = "*"
-
-[[package.dep]]
-type = "build"
-name = "findutils"
 version = "*"
 
 [[package.dep]]

@@ -1,0 +1,53 @@
+[package]
+name = "xcb-proto"
+version = "1.17.0"
+description = "XML descriptions of the X protocol used by libxcb"
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/proto/xcb-proto-1.17.0.tar.xz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "python"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"

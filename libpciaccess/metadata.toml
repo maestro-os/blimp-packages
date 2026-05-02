@@ -1,0 +1,58 @@
+[package]
+name = "libpciaccess"
+version = "0.19"
+description = "Generic PCI access library"
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/lib/libpciaccess-0.19.tar.xz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "zlib"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "meson"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "ninja"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

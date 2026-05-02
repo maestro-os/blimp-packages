@@ -1,15 +1,15 @@
 [package]
-name = "xorg-server"
-version = "21.1.21"
-description = "The X.Org project provides an open source implementation of the X Window System."
+name = "libx11"
+version = "1.8"
+description = "Core X11 protocol client library"
 
 [[source]]
 location = "/"
-url = "https://www.x.org/releases/individual/xserver/xorg-server-21.1.21.tar.xz"
+url = "https://www.x.org/releases/individual/lib/libX11-1.8.tar.xz"
 
 [[package.dep]]
 type = "build-and-run"
-name = "libx11"
+name = "musl"
 version = "*"
 
 [[package.dep]]
@@ -19,32 +19,12 @@ version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "libxfont2"
+name = "xtrans"
 version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "libxkbfile"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxcvt"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libpciaccess"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "musl"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "pixman"
+name = "xorgproto"
 version = "*"
 
 [[package.dep]]
@@ -59,7 +39,12 @@ version = "*"
 
 [[package.dep]]
 type = "build"
-name = "findutils"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "file"
 version = "*"
 
 [[package.dep]]
@@ -75,6 +60,11 @@ version = "*"
 [[package.dep]]
 type = "build"
 name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "perl"
 version = "*"
 
 [[package.dep]]

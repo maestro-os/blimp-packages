@@ -3,14 +3,19 @@
 set -e
 cd *
 
+# TODO reenable libdrm/glx/dri/dri2/dri3 when supported by Maestro
 ./configure \
 	--prefix=/usr \
 	--build=$BUILD \
 	--host=$HOST \
 	--localstatedir=/var \
-	--disable-pciaccess \
 	--disable-int10-module \
 	--disable-glamor \
+	--disable-libdrm \
+	--disable-glx \
+	--disable-dri \
+	--disable-dri2 \
+	--disable-dri3 \
 	--disable-vgahw \
 	--disable-xephyr \
 	--disable-xnest \

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+cd *
+
+python3 configure.py --bootstrap --verbose
+
+mkdir -pv "$INSTALL_PATH/usr/bin/"
+install -vm755 ninja "$INSTALL_PATH/usr/bin/"
+install -vDm644 misc/bash-completion "$INSTALL_PATH/usr/share/bash-completion/completions/ninja"
+install -vDm644 misc/zsh-completion "$INSTALL_PATH/usr/share/zsh/site-functions/_ninja"

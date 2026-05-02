@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure \
+	--prefix=/usr \
+	--disable-static \
+	--disable-devel-docs
+
+make -j${JOBS}
+make DESTDIR="$INSTALL_PATH" install
