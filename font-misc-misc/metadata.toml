@@ -1,0 +1,78 @@
+[package]
+name = "font-misc-misc"
+version = "1.1.3"
+description = "X.Org miscellaneous bitmap fonts, providing the default \"fixed\" font the X server requires."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/font/font-misc-misc-1.1.3.tar.xz"
+
+[[package.dep]]
+type = "build"
+name = "font-util"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bdftopcf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "mkfontscale"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "mkfontdir"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gzip"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

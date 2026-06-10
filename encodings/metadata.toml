@@ -1,0 +1,68 @@
+[package]
+name = "encodings"
+version = "1.1.0"
+description = "X.Org font encoding tables used by the X server and font tools."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/font/encodings-1.1.0.tar.xz"
+
+[[package.dep]]
+type = "build"
+name = "font-util"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "mkfontscale"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gzip"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

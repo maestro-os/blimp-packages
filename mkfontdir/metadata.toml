@@ -1,0 +1,58 @@
+[package]
+name = "mkfontdir"
+version = "1.0.7"
+description = "Create an index of X font files in a directory (wrapper around mkfontscale)."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/app/mkfontdir-1.0.7.tar.gz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "mkfontscale"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"
