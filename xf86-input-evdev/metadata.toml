@@ -1,0 +1,88 @@
+[package]
+name = "xf86-input-evdev"
+version = "2.11.0"
+description = "X.Org input driver for Linux evdev devices (/dev/input/event*)."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/driver/xf86-input-evdev-2.11.0.tar.xz"
+
+[[package.dep]]
+type = "build-and-run"
+name = "xorg-server"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "libevdev"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "mtdev"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "musl"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "xorgproto"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "findutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "patch"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

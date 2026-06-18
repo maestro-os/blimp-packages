@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure \
+	--prefix=/usr \
+	--build=$BUILD \
+	--host=$HOST
+
+make -j${JOBS}
+make DESTDIR="$INSTALL_PATH" install
