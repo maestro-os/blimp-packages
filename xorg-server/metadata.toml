@@ -68,6 +68,16 @@ name = "font-cursor-misc"
 version = "*"
 
 [[package.dep]]
+type = "build-and-run"
+name = "xkeyboard-config"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "xkbcomp"
+version = "*"
+
+[[package.dep]]
 type = "build"
 name = "bash"
 version = "*"

@@ -1,0 +1,73 @@
+[package]
+name = "xkeyboard-config"
+version = "2.47"
+description = "X keyboard configuration database (keymaps, layouts and rules used by the X server and libxkbcommon)."
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.47.tar.xz"
+
+[[package.dep]]
+type = "build"
+name = "meson"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "ninja"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "pkgconf"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "python"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "perl"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

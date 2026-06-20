@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+cd *
+
+mkdir build/
+cd build/
+
+meson setup --prefix=/usr --buildtype=release -Dnls=false ..
+ninja
+
+DESTDIR="$INSTALL_PATH" ninja install
+
+# Install the keymap database directly at the legacy /usr/share/X11/xkb path as a
+# real directory, instead of /usr/share/xkeyboard-config-2 + a compatibility
+# symlink. The X server owns /usr/share/X11/xkb as a real directory (it writes
+# compiled keymaps under xkb/compiled), and a package cannot replace an existing
+# directory with a symlink at install time.
+share="$INSTALL_PATH/usr/share"
+rm -f "$share/X11/xkb"
+mv "$share/xkeyboard-config-2" "$share/X11/xkb"
+sed -i 's|/usr/share/xkeyboard-config-2|/usr/share/X11/xkb|g' \
+	"$share/pkgconfig/xkeyboard-config-2.pc"

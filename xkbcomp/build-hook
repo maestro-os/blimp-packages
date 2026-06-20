@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+cd *
+
+./configure \
+	--prefix=/usr \
+	--with-xkb-config-root=/usr/share/X11/xkb
+
+make -j${JOBS}
+make DESTDIR="$INSTALL_PATH" install

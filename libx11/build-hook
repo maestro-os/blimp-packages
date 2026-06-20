@@ -7,5 +7,25 @@ cd *
 	--prefix=/usr \
 	--disable-static
 
-make -j${JOBS}
-make DESTDIR="$INSTALL_PATH" install
+# Work around libtool under the musl cross-toolchain: it does not recognise the
+# *-linux-musl host, so when linking libX11.so it silently drops the i18n module
+# convenience archives (modules/{lc,im,om}/*) that are referenced *nested* inside
+# xlibi18n/libi18n.la's LIBADD — while `-no-undefined` is a no-op, so the broken
+# library links anyway. The result is a libX11.so with undefined references to
+# _XlcDefaultLoader/_XlcGenericLoader/_XlcUtf8Loader/_XInitIM/_XInitOM, breaking
+# every client that links libX11 (e.g. xkbcomp).
+#
+# Flat (directly-referenced) convenience libs like src/xcms are linked in fine, so
+# we override USE_I18N_LIBS to reference the module archives directly in
+# libX11_la_LIBADD instead of only through libi18n.la. Paths are relative to src/,
+# where libX11.la is linked. The command-line override propagates to the recursive
+# src/ sub-make.
+I18N_LIBS="xlibi18n/libi18n.la \
+	../modules/lc/def/libxlcDef.la \
+	../modules/lc/gen/libxlibi18n.la \
+	../modules/lc/Utf8/libxlcUTF8Load.la \
+	../modules/im/ximcp/libximcp.la \
+	../modules/om/generic/libxomGeneric.la"
+
+make -j${JOBS} USE_I18N_LIBS="$I18N_LIBS"
+make DESTDIR="$INSTALL_PATH" install USE_I18N_LIBS="$I18N_LIBS"
