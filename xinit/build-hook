@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+cd *
+
+# `--sysconfdir=/etc` puts the default xinitrc/xserverrc in /etc/X11/xinit
+# (where `startx` looks) rather than the non-standard /usr/etc.
+./configure \
+	--prefix=/usr \
+	--sysconfdir=/etc
+
+make -j${JOBS}
+make DESTDIR="$INSTALL_PATH" install
