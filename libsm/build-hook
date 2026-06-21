@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+cd *
+
+# `--without-libuuid`: musl has no libuuid and it is only used for session
+# management client IDs, which are optional.
+./configure \
+	--prefix=/usr \
+	--disable-static \
+	--without-libuuid
+
+make -j${JOBS}
+make DESTDIR="$INSTALL_PATH" install

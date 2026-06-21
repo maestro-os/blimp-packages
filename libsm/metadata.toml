@@ -1,11 +1,11 @@
 [package]
-name = "xeyes"
-version = "1.3.1"
-description = "The X.Org project provides an open source implementation of the X Window System."
+name = "libsm"
+version = "1.2.6"
+description = "X Session Management library"
 
 [[source]]
 location = "/"
-url = "https://www.x.org/releases/individual/app/xeyes-1.3.1.tar.xz"
+url = "https://www.x.org/releases/individual/lib/libSM-1.2.6.tar.xz"
 
 [[package.dep]]
 type = "build-and-run"
@@ -14,37 +14,17 @@ version = "*"
 
 [[package.dep]]
 type = "build-and-run"
-name = "libx11"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxt"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxext"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxmu"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxi"
-version = "*"
-
-[[package.dep]]
-type = "build-and-run"
-name = "libxrender"
+name = "libice"
 version = "*"
 
 [[package.dep]]
 type = "build-and-run"
 name = "xorgproto"
+version = "*"
+
+[[package.dep]]
+type = "build-and-run"
+name = "xtrans"
 version = "*"
 
 [[package.dep]]
