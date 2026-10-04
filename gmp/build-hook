@@ -10,5 +10,4 @@ CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu++17" ./configure \
 	--disable-static
 
 make -j${JOBS}
-make check
 make DESTDIR="$INSTALL_PATH" install

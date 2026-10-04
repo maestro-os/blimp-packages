@@ -66,3 +66,38 @@ version = "0.24"
 type = "build-and-run"
 name = "zlib"
 version = "*"
+
+[[package.dep]]
+type = "build"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "findutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "m4"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"

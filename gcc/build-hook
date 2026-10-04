@@ -3,10 +3,22 @@
 set -e
 cd *
 
+# Patch
+case ${HOST%%-*} in
+	x86_64)
+		sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64
+	;;
+esac
+
 mkdir build
 cd build
 
-../configure \
+# GCC 15's libcody assumes `u8""` literals are `char` arrays, which stopped
+# being true in C++20, so it fails to build under host compilers defaulting to
+# gnu++20 or later (GCC 16+). Drop `char8_t` rather than pinning the dialect:
+# libcody's configure demands `__cplusplus` be exactly 201103 and retries with
+# `-std=c++11`, which an explicit `-std=` here would override.
+CXXFLAGS="-g -O2 -fno-char8_t" ../configure \
 	--prefix=/usr            \
 	--enable-languages=c,c++ \
 	--enable-default-pie     \
@@ -15,7 +27,10 @@ cd build
 	--disable-multilib       \
 	--disable-bootstrap      \
 	--disable-fixincludes    \
-	--with-system-zlib
+	--with-system-zlib       \
+	--with-build-sysroot="$SYSROOT" \
+	--disable-libsanitizer
+
 make -j${JOBS}
-make DESTDIR=$INSTALL_PATH install
-ln -s gcc $INSTALL_PATH/usr/bin/cc
+make DESTDIR=$INSTALL_PATH install-strip
+ln -s gcc "$INSTALL_PATH/usr/bin/cc"

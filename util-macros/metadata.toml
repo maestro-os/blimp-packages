@@ -1,0 +1,33 @@
+[package]
+name = "util-macros"
+version = "1.20.2"
+description = "X.Org autoconf macros shared by the X Window System packages"
+
+[[source]]
+location = "/"
+url = "https://www.x.org/releases/individual/util/util-macros-1.20.2.tar.xz"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"

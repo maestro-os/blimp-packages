@@ -66,3 +66,8 @@ version = "*"
 type = "build"
 name = "bootstrap-gcc"
 version = "*"
+
+[[package.dep]]
+type = "build"
+name = "util-macros"
+version = "*"

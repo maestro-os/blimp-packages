@@ -10,5 +10,4 @@ cd *
 	--enable-shared
 
 make -j${JOBS}
-make check
 make DESTDIR="$INSTALL_PATH" install

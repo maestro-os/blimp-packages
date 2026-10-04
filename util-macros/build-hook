@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+cd *
+
+# Nothing is compiled: the package only installs `.m4` macros and the `xorg-macros.pc`
+# that the other X.Org packages' configure scripts look for.
+./configure --prefix=/usr
+
+make DESTDIR="$INSTALL_PATH" install

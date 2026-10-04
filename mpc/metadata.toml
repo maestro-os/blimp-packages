@@ -15,9 +15,54 @@ version = "*"
 [[package.dep]]
 type = "build-and-run"
 name = "gmp"
-version = "6.2.1"
+version = "6.3.0"
 
 [[package.dep]]
 type = "build-and-run"
 name = "mpfr"
-version = "4.1.0"
+version = "4.2.2"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "diffutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "gawk"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
+version = "*"

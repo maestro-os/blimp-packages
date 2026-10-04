@@ -15,7 +15,7 @@ version = "*"
 [[package.dep]]
 type = "build-and-run"
 name = "gmp"
-version = "6.2.1"
+version = "6.3.0"
 
 [[package.dep]]
 type = "build"
@@ -30,4 +30,34 @@ version = "*"
 [[package.dep]]
 type = "build"
 name = "make"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bash"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "coreutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "grep"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "sed"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-binutils"
+version = "*"
+
+[[package.dep]]
+type = "build"
+name = "bootstrap-gcc"
 version = "*"

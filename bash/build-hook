@@ -3,11 +3,11 @@
 set -e
 cd *
 
-./configure --prefix=/ \
+./configure --prefix=/usr \
 	--build=$BUILD \
 	--host=$HOST \
 	--without-bash-malloc
 make -j${JOBS}
 
 make DESTDIR=$INSTALL_PATH install
-ln -sv bash $INSTALL_PATH/bin/sh
+ln -sv bash "$INSTALL_PATH/usr/bin/sh"
